@@ -1,0 +1,382 @@
+@charset 'UTF-8';
+
+@font-face
+{
+	font-family: 'FontAwesome';
+	src: url('fonts/fontawesome-webfont.eot?v=3.0.1');
+	src: url('fonts/fontawesome-webfont.eot?#iefix&v=3.0.1') format('embedded-opentype'),
+	     url('fonts/fontawesome-webfont.woff?v=3.0.1') format('woff'),
+	     url('fonts/fontawesome-webfont.ttf?v=3.0.1') format('truetype'),
+	     url('fonts/fontawesome-webfont.svg#FontAwesome') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face
+{
+	font-family: 'Font-Awesome-Social';
+	src: url('fonts/fontawesome-social-webfont.eot');
+	src: url('fonts/fontawesome-social-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('fonts/fontawesome-social-webfont.woff') format('woff'),
+		 url('fonts/fontawesome-social-webfont.ttf') format('truetype'),
+		 url('fonts/fontawesome-social-webfont.svg#Font-Awesome-More') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/*********************************************************************************/
+/* fas                                                                         */
+/*********************************************************************************/
+
+	/*
+		Powered by:
+		
+		Font Awesome (http://fortawesome.github.com/Font-Awesome/)
+		Font Awesome More (http://gregoryloucas.github.com/Font-Awesome-More/)
+	*/
+
+	.fa
+	{
+		text-decoration: none;
+	}
+
+		.fa:before
+		{
+			font-size: 1.25em;
+			text-decoration: none;
+			font-family: FontAwesome;
+			font-weight: normal;
+			font-style: normal;
+			-webkit-text-rendering: optimizeLegibility;
+			-moz-text-rendering: optimizeLegibility;
+			-ms-text-rendering: optimizeLegibility;
+			-o-text-rendering: optimizeLegibility;
+			text-rendering: optimizeLegibility;
+			-webkit-font-smoothing: antialiased;
+			-moz-font-smoothing: antialiased;
+			-ms-font-smoothing: antialiased;
+			-o-font-smoothing: antialiased;
+			font-smoothing: antialiased;
+			-webkit-font-feature-settings: "liga" 1, "dlig" 1;
+			-moz-font-feature-settings: "liga=1, dlig=1";
+			-ms-font-feature-settings: "liga" 1, "dlig" 1;
+			-o-font-feature-settings: "liga" 1, "dlig" 1;
+			font-feature-settings: "liga" 1, "dlig" 1;
+		}
+
+		.fa-glass:before                { content: "\f000"; }
+		.fa-music:before                { content: "\f001"; }
+		.fa-search:before               { content: "\f002"; }
+		.fa-envelope:before             { content: "\f003"; }
+		.fa-heart:before                { content: "\f004"; }
+		.fa-star:before                 { content: "\f005"; }
+		.fa-star-empty:before           { content: "\f006"; }
+		.fa-user:before                 { content: "\f007"; }
+		.fa-film:before                 { content: "\f008"; }
+		.fa-th-large:before             { content: "\f009"; }
+		.fa-th:before                   { content: "\f00a"; }
+		.fa-th-list:before              { content: "\f00b"; }
+		.fa-ok:before                   { content: "\f00c"; }
+		.fa-remove:before               { content: "\f00d"; }
+		.fa-zoom-in:before              { content: "\f00e"; }
+
+		.fa-zoom-out:before             { content: "\f010"; }
+		.fa-off:before                  { content: "\f011"; }
+		.fa-signal:before               { content: "\f012"; }
+		.fa-cog:before                  { content: "\f013"; }
+		.fa-trash:before                { content: "\f014"; }
+		.fa-home:before                 { content: "\f015"; }
+		.fa-file:before                 { content: "\f016"; }
+		.fa-time:before                 { content: "\f017"; }
+		.fa-road:before                 { content: "\f018"; }
+		.fa-download-alt:before         { content: "\f019"; }
+		.fa-download:before             { content: "\f01a"; }
+		.fa-upload:before               { content: "\f01b"; }
+		.fa-inbox:before                { content: "\f01c"; }
+		.fa-play-circle:before          { content: "\f01d"; }
+		.fa-repeat:before               { content: "\f01e"; }
+
+		/* \f020 doesn't work in Safari. all shifted one down */
+		.fa-refresh:before              { content: "\f021"; }
+		.fa-list-alt:before             { content: "\f022"; }
+		.fa-lock:before                 { content: "\f023"; }
+		.fa-flag:before                 { content: "\f024"; }
+		.fa-headphones:before           { content: "\f025"; }
+		.fa-volume-off:before           { content: "\f026"; }
+		.fa-volume-down:before          { content: "\f027"; }
+		.fa-volume-up:before            { content: "\f028"; }
+		.fa-qrcode:before               { content: "\f029"; }
+		.fa-barcode:before              { content: "\f02a"; }
+		.fa-tag:before                  { content: "\f02b"; }
+		.fa-tags:before                 { content: "\f02c"; }
+		.fa-book:before                 { content: "\f02d"; }
+		.fa-bookmark:before             { content: "\f02e"; }
+		.fa-print:before                { content: "\f02f"; }
+
+		.fa-camera:before               { content: "\f030"; }
+		.fa-font:before                 { content: "\f031"; }
+		.fa-bold:before                 { content: "\f032"; }
+		.fa-italic:before               { content: "\f033"; }
+		.fa-text-height:before          { content: "\f034"; }
+		.fa-text-width:before           { content: "\f035"; }
+		.fa-align-left:before           { content: "\f036"; }
+		.fa-align-center:before         { content: "\f037"; }
+		.fa-align-right:before          { content: "\f038"; }
+		.fa-align-justify:before        { content: "\f039"; }
+		.fa-list:before                 { content: "\f03a"; }
+		.fa-indent-left:before          { content: "\f03b"; }
+		.fa-indent-right:before         { content: "\f03c"; }
+		.fa-facetime-video:before       { content: "\f03d"; }
+		.fa-picture:before              { content: "\f03e"; }
+
+		.fa-pencil:before               { content: "\f040"; }
+		.fa-map-marker:before           { content: "\f041"; }
+		.fa-adjust:before               { content: "\f042"; }
+		.fa-tint:before                 { content: "\f043"; }
+		.fa-edit:before                 { content: "\f044"; }
+		.fa-share:before                { content: "\f045"; }
+		.fa-check:before                { content: "\f046"; }
+		.fa-move:before                 { content: "\f047"; }
+		.fa-step-backward:before        { content: "\f048"; }
+		.fa-fast-backward:before        { content: "\f049"; }
+		.fa-backward:before             { content: "\f04a"; }
+		.fa-play:before                 { content: "\f04b"; }
+		.fa-pause:before                { content: "\f04c"; }
+		.fa-stop:before                 { content: "\f04d"; }
+		.fa-forward:before              { content: "\f04e"; }
+
+		.fa-fast-forward:before         { content: "\f050"; }
+		.fa-step-forward:before         { content: "\f051"; }
+		.fa-eject:before                { content: "\f052"; }
+		.fa-chevron-left:before         { content: "\f053"; }
+		.fa-chevron-right:before        { content: "\f054"; }
+		.fa-plus-sign:before            { content: "\f055"; }
+		.fa-minus-sign:before           { content: "\f056"; }
+		.fa-remove-sign:before          { content: "\f057"; }
+		.fa-ok-sign:before              { content: "\f058"; }
+		.fa-question-sign:before        { content: "\f059"; }
+		.fa-info-sign:before            { content: "\f05a"; }
+		.fa-screenshot:before           { content: "\f05b"; }
+		.fa-remove-circle:before        { content: "\f05c"; }
+		.fa-ok-circle:before            { content: "\f05d"; }
+		.fa-ban-circle:before           { content: "\f05e"; }
+
+		.fa-arrow-left:before           { content: "\f060"; }
+		.fa-arrow-right:before          { content: "\f061"; }
+		.fa-arrow-up:before             { content: "\f062"; }
+		.fa-arrow-down:before           { content: "\f063"; }
+		.fa-share-alt:before            { content: "\f064"; }
+		.fa-resize-full:before          { content: "\f065"; }
+		.fa-resize-small:before         { content: "\f066"; }
+		.fa-plus:before                 { content: "\f067"; }
+		.fa-minus:before                { content: "\f068"; }
+		.fa-asterisk:before             { content: "\f069"; }
+		.fa-exclamation-sign:before     { content: "\f06a"; }
+		.fa-gift:before                 { content: "\f06b"; }
+		.fa-leaf:before                 { content: "\f06c"; }
+		.fa-fire:before                 { content: "\f06d"; }
+		.fa-eye-open:before             { content: "\f06e"; }
+
+		.fa-eye-close:before            { content: "\f070"; }
+		.fa-warning-sign:before         { content: "\f071"; }
+		.fa-plane:before                { content: "\f072"; }
+		.fa-calendar:before             { content: "\f073"; }
+		.fa-random:before               { content: "\f074"; }
+		.fa-comment:before              { content: "\f075"; }
+		.fa-magnet:before               { content: "\f076"; }
+		.fa-chevron-up:before           { content: "\f077"; }
+		.fa-chevron-down:before         { content: "\f078"; }
+		.fa-retweet:before              { content: "\f079"; }
+		.fa-shopping-cart:before        { content: "\f07a"; }
+		.fa-folder-close:before         { content: "\f07b"; }
+		.fa-folder-open:before          { content: "\f07c"; }
+		.fa-resize-vertical:before      { content: "\f07d"; }
+		.fa-resize-horizontal:before    { content: "\f07e"; }
+
+		.fa-bar-chart:before            { content: "\f080"; }
+		.fa-twitter-sign:before         { content: "\f081"; }
+		.fa-facebook-sign:before        { content: "\f082"; }
+		.fa-camera-retro:before         { content: "\f083"; }
+		.fa-key:before                  { content: "\f084"; }
+		.fa-cogs:before                 { content: "\f085"; }
+		.fa-comments:before             { content: "\f086"; }
+		.fa-thumbs-up:before            { content: "\f087"; }
+		.fa-thumbs-down:before          { content: "\f088"; }
+		.fa-star-half:before            { content: "\f089"; }
+		.fa-heart-empty:before          { content: "\f08a"; }
+		.fa-signout:before              { content: "\f08b"; }
+		.fa-linkedin-sign:before        { content: "\f08c"; }
+		.fa-pushpin:before              { content: "\f08d"; }
+		.fa-external-link:before        { content: "\f08e"; }
+
+		.fa-signin:before               { content: "\f090"; }
+		.fa-trophy:before               { content: "\f091"; }
+		.fa-github-sign:before          { content: "\f092"; }
+		.fa-upload-alt:before           { content: "\f093"; }
+		.fa-lemon:before                { content: "\f094"; }
+		.fa-phone:before                { content: "\f095"; }
+		.fa-check-empty:before          { content: "\f096"; }
+		.fa-bookmark-empty:before       { content: "\f097"; }
+		.fa-phone-sign:before           { content: "\f098"; }
+		.fa-twitter:before              { content: "\f099"; }
+		.fa-facebook:before             { content: "\f09a"; }
+		.fa-github:before               { content: "\f09b"; }
+		.fa-unlock:before               { content: "\f09c"; }
+		.fa-credit-card:before          { content: "\f09d"; }
+		.fa-rss:before                  { content: "\f09e"; }
+
+		.fa-hdd:before                  { content: "\f0a0"; }
+		.fa-bullhorn:before             { content: "\f0a1"; }
+		.fa-bell:before                 { content: "\f0a2"; }
+		.fa-certificate:before          { content: "\f0a3"; }
+		.fa-hand-right:before           { content: "\f0a4"; }
+		.fa-hand-left:before            { content: "\f0a5"; }
+		.fa-hand-up:before              { content: "\f0a6"; }
+		.fa-hand-down:before            { content: "\f0a7"; }
+		.fa-circle-arrow-left:before    { content: "\f0a8"; }
+		.fa-circle-arrow-right:before   { content: "\f0a9"; }
+		.fa-circle-arrow-up:before      { content: "\f0aa"; }
+		.fa-circle-arrow-down:before    { content: "\f0ab"; }
+		.fa-globe:before                { content: "\f0ac"; }
+		.fa-wrench:before               { content: "\f0ad"; }
+		.fa-tasks:before                { content: "\f0ae"; }
+
+		.fa-filter:before               { content: "\f0b0"; }
+		.fa-briefcase:before            { content: "\f0b1"; }
+		.fa-fullscreen:before           { content: "\f0b2"; }
+
+		.fa-group:before                { content: "\f0c0"; }
+		.fa-link:before                 { content: "\f0c1"; }
+		.fa-cloud:before                { content: "\f0c2"; }
+		.fa-beaker:before               { content: "\f0c3"; }
+		.fa-cut:before                  { content: "\f0c4"; }
+		.fa-copy:before                 { content: "\f0c5"; }
+		.fa-paper-clip:before           { content: "\f0c6"; }
+		.fa-save:before                 { content: "\f0c7"; }
+		.fa-sign-blank:before           { content: "\f0c8"; }
+		.fa-reorder:before              { content: "\f0c9"; }
+		.fa-list-ul:before              { content: "\f0ca"; }
+		.fa-list-ol:before              { content: "\f0cb"; }
+		.fa-strikethrough:before        { content: "\f0cc"; }
+		.fa-underline:before            { content: "\f0cd"; }
+		.fa-table:before                { content: "\f0ce"; }
+
+		.fa-magic:before                { content: "\f0d0"; }
+		.fa-truck:before                { content: "\f0d1"; }
+		.fa-pinterest:before            { content: "\f0d2"; }
+		.fa-pinterest-sign:before       { content: "\f0d3"; }
+		.fa-google-plus-sign:before     { content: "\f0d4"; }
+		.fa-google-plus:before          { content: "\f0d5"; }
+		.fa-money:before                { content: "\f0d6"; }
+		.fa-caret-down:before           { content: "\f0d7"; }
+		.fa-caret-up:before             { content: "\f0d8"; }
+		.fa-caret-left:before           { content: "\f0d9"; }
+		.fa-caret-right:before          { content: "\f0da"; }
+		.fa-columns:before              { content: "\f0db"; }
+		.fa-sort:before                 { content: "\f0dc"; }
+		.fa-sort-down:before            { content: "\f0dd"; }
+		.fa-sort-up:before              { content: "\f0de"; }
+
+		.fa-envelope-alt:before         { content: "\f0e0"; }
+		.fa-linkedin:before             { content: "\f0e1"; }
+		.fa-undo:before                 { content: "\f0e2"; }
+		.fa-legal:before                { content: "\f0e3"; }
+		.fa-dashboard:before            { content: "\f0e4"; }
+		.fa-comment-alt:before          { content: "\f0e5"; }
+		.fa-comments-alt:before         { content: "\f0e6"; }
+		.fa-bolt:before                 { content: "\f0e7"; }
+		.fa-sitemap:before              { content: "\f0e8"; }
+		.fa-umbrella:before             { content: "\f0e9"; }
+		.fa-paste:before                { content: "\f0ea"; }
+		.fa-lightbulb:before            { content: "\f0eb"; }
+		.fa-exchange:before             { content: "\f0ec"; }
+		.fa-cloud-download:before       { content: "\f0ed"; }
+		.fa-cloud-upload:before         { content: "\f0ee"; }
+
+		.fa-user-md:before              { content: "\f0f0"; }
+		.fa-stethoscope:before          { content: "\f0f1"; }
+		.fa-suitcase:before             { content: "\f0f2"; }
+		.fa-bell-alt:before             { content: "\f0f3"; }
+		.fa-coffee:before               { content: "\f0f4"; }
+		.fa-food:before                 { content: "\f0f5"; }
+		.fa-file-alt:before             { content: "\f0f6"; }
+		.fa-building:before             { content: "\f0f7"; }
+		.fa-hospital:before             { content: "\f0f8"; }
+		.fa-ambulance:before            { content: "\f0f9"; }
+		.fa-medkit:before               { content: "\f0fa"; }
+		.fa-fighter-jet:before          { content: "\f0fb"; }
+		.fa-beer:before                 { content: "\f0fc"; }
+		.fa-h-sign:before               { content: "\f0fd"; }
+		.fa-plus-sign-alt:before        { content: "\f0fe"; }
+
+		.fa-double-angle-left:before    { content: "\f100"; }
+		.fa-double-angle-right:before   { content: "\f101"; }
+		.fa-double-angle-up:before      { content: "\f102"; }
+		.fa-double-angle-down:before    { content: "\f103"; }
+		.fa-angle-left:before           { content: "\f104"; }
+		.fa-angle-right:before          { content: "\f105"; }
+		.fa-angle-up:before             { content: "\f106"; }
+		.fa-angle-down:before           { content: "\f107"; }
+		.fa-desktop:before              { content: "\f108"; }
+		.fa-laptop:before               { content: "\f109"; }
+		.fa-tablet:before               { content: "\f10a"; }
+		.fa-mobile-phone:before         { content: "\f10b"; }
+		.fa-circle-blank:before         { content: "\f10c"; }
+		.fa-quote-left:before           { content: "\f10d"; }
+		.fa-quote-right:before          { content: "\f10e"; }
+
+		.fa-spinner:before              { content: "\f110"; }
+		.fa-circle:before               { content: "\f111"; }
+		.fa-reply:before                { content: "\f112"; }
+		.fa-github-alt:before           { content: "\f113"; }
+		.fa-folder-close-alt:before     { content: "\f114"; }
+		.fa-folder-open-alt:before      { content: "\f115"; }
+		.fa-futbol:before		        { content: "\f1e3"; }
+
+
+		.fa-blogger-sign:before,.fa-blogger:before,.fa-delicious:before,.fa-dribbble-sign:before,.fa-dribbble:before,.fa-dropbox:before,.fa-drupal:before,.fa-evernote-sign:before,.fa-evernote:before,.fa-flickr-sign:before,.fa-flickr:before,.fa-forrst-sign:before,.fa-forrst:before,.fa-foursquare-sign:before,.fa-foursquare:before,.fa-git-fork:before,.fa-hacker-news:before,.fa-instagram:before,.fa-lastfm-sign:before,.fa-lastfm:before,.fa-paypal:before,.fa-picasa-sign:before,.fa-picasa:before,.fa-reddit:before,.fa-share-this-sign:before,.fa-share-this:before,.fa-skype:before,.fa-soundcloud:before,.fa-spotify:before,.fa-stack-overflow:before,.fa-tumblr-sign:before,.fa-tumblr:before,.fa-vimeo-sign:before,.fa-vimeo:before,.fa-wordpress-sign:before,.fa-wordpress:before,.fa-yelp-sign:before,.fa-yelp:before,.fa-youtube-sign:before,.fa-youtube:before              {font-family:'Font-Awesome-Social'; }
+
+		.fa-dropbox:before              { content: "\f300"; }
+		.fa-drupal:before               { content: "\f301"; }
+		.fa-git-fork:before             { content: "\f302"; }
+		.fa-instagram:before            { content: "\f303"; }
+		.fa-share-this-sign:before      { content: "\f304"; }
+		.fa-share-this:before           { content: "\f305"; }
+		.fa-foursquare-sign:before      { content: "\f306"; }
+		.fa-foursquare:before           { content: "\f307"; }
+		.fa-hacker-news:before          { content: "\f308"; }
+		.fa-skype:before                { content: "\f309"; }
+		.fa-spotify:before              { content: "\f30a"; }
+		.fa-soundcloud:before           { content: "\f30b"; }
+		.fa-paypal:before               { content: "\f30c"; }
+		.fa-youtube-sign:before         { content: "\f30d"; }
+		.fa-youtube:before              { content: "\f30e"; }
+		.fa-reddit:before               { content: "\f30f"; }
+		.fa-blogger-sign:before         { content: "\f310"; }
+		.fa-blogger:before              { content: "\f311"; }
+		.fa-dribbble-sign:before        { content: "\f312"; }
+		.fa-dribbble:before             { content: "\f313"; }
+		.fa-evernote-sign:before        { content: "\f314"; }
+		.fa-evernote:before             { content: "\f315"; }
+		.fa-flickr-sign:before          { content: "\f316"; }
+		.fa-flickr:before               { content: "\f317"; }
+		.fa-forrst-sign:before          { content: "\f318"; }
+		.fa-forrst:before               { content: "\f319"; }
+		.fa-delicious:before            { content: "\f31a"; }
+		.fa-lastfm-sign:before          { content: "\f31b"; }
+		.fa-lastfm:before               { content: "\f31c"; }
+		.fa-picasa-sign:before          { content: "\f31d"; }
+		.fa-picasa:before               { content: "\f31e"; }
+		.fa-stack-overflow:before       { content: "\f320"; }
+		.fa-tumblr-sign:before          { content: "\f321"; }
+		.fa-tumblr:before               { content: "\f322"; }
+		.fa-vimeo-sign:before           { content: "\f323"; }
+		.fa-vimeo:before                { content: "\f324"; }
+		.fa-wordpress-sign:before       { content: "\f325"; }
+		.fa-wordpress:before            { content: "\f326"; }
+		.fa-yelp-sign:before            { content: "\f327"; }
+		.fa-yelp:before                 { content: "\f328"; }
+		.fa-cloud-upload:before		  { content: "\f0ee"; }
+		.fa-cloud-download:before		  { content: "\f0ed"; }
+		
+		

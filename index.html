@@ -1,0 +1,1625 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+
+Name       : Breadth 
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20140331
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script type="text/javascript" language = "javascript">
+
+
+ var toppic, but1, but2, but3, but4, but5;
+ 
+ //淡入效果(含淡入到指定透明度)  
+function fadeIn(elem, speed, opacity){  
+    /* 
+     * 参数说明 
+     * elem==>需要淡入的元素 
+     * speed==>淡入速度,正整数(可选) 
+     * opacity==>淡入到指定的透明度,0~100(可选) 
+     */  
+	 
+    speed = speed || 20;  
+    opacity = opacity || 100;  
+    //显示元素,并将元素值为0透明度(不可见)  
+    <!-- elem.style.display = 'block';   -->
+    <!-- iBase.SetOpacity(elem, 0);   -->
+    //初始化透明度变化值为0  
+    var val = 0;  
+    //循环将透明值以5递增,即淡入效果  
+    (function(){  
+        elem.style.opacity=val;
+        val += 0.01;  
+        if (val <= 1) {  
+            setTimeout(arguments.callee, speed)  
+        }  
+    })();  
+	
+}  
+  
+//淡出效果(含淡出到指定透明度)  
+function fadeOut(elem, speed, opacity){  
+    /* 
+     * 参数说明 
+     * elem==>需要淡入的元素 
+     * speed==>淡入速度,正整数(可选) 
+     * opacity==>淡入到指定的透明度,0~100(可选) 
+     */  
+	
+	 var iBase;
+    speed = speed || 20;  
+    opacity = opacity || 0;  
+    //初始化透明度变化值为0  
+    var val = 1;  
+    //循环将透明值以5递减,即淡出效果  
+    (function(){  
+        
+        val -= 0.01;  
+		elem.style.opacity=val;
+        if (val >= opacity) {  
+            setTimeout(arguments.callee, speed);  
+        }else if (val <= 0) {  
+            //元素透明度为0后隐藏元素  
+            //elem.style.display = 'none';  
+        }  
+    })();  
+	
+}
+ 
+ 
+ 
+ window.onload=function(){
+	toppic = document.getElementById("header-featured"); 
+	but1 = document.getElementById("but1"); 
+	but2 = document.getElementById("but2"); 
+	but3 = document.getElementById("but3"); 
+	but4 = document.getElementById("but4"); 
+	but5 = document.getElementById("but5"); 
+	but1.addEventListener("mouseover", function( event ) {  pic1change() ; }, false); 
+	but1.addEventListener("mouseout", function( event ) { pic1changeback() ; }, false); 
+	but2.addEventListener("mouseover", function( event ) {  pic2change() ; }, false); 
+	but2.addEventListener("mouseout", function( event ) {  pic2changeback() ; }, false); 
+	but3.addEventListener("mouseover", function( event ) { pic3change()  ; }, false); 
+	but3.addEventListener("mouseout", function( event ) {  pic3changeback() ; }, false); 
+	but4.addEventListener("mouseover", function( event ) { pic4change()  ; }, false); 
+	but4.addEventListener("mouseout", function( event ) {  pic4changeback(); }, false); 
+	but5.addEventListener("mouseover", function( event ) { pic5change()  ; }, false); 
+	but5.addEventListener("mouseout", function( event ) {  pic5changeback() ; }, false); 
+ }
+ 
+function pic1change(){
+	fadeOut(toppic, 10, 0);
+	toppic.style.backgroundImage = "url(images/613660.png)";
+	fadeIn(toppic, 10, 0);
+
+}
+function pic1changeback(){
+	fadeOut(toppic, 10, 0);
+	toppic.style.backgroundImage = "url(images/sc1.jpg)";
+	fadeIn(toppic, 10, 0);
+
+}
+
+function pic2change(){
+	fadeOut(toppic, 10, 0);
+	toppic.style.backgroundImage = "url(images/galaxy.png)";
+	fadeIn(toppic, 10, 0);
+
+}
+function pic2changeback(){
+	fadeOut(toppic, 10, 0);
+	toppic.style.backgroundImage = "url(images/sc1.jpg)";
+	fadeIn(toppic, 10, 0);
+
+}
+function pic3change(){
+	fadeOut(toppic, 10, 0);
+	toppic.style.backgroundImage = "url(images/wcquiz-header-2.png)";
+	fadeIn(toppic, 10, 0);
+
+}
+function pic3changeback(){
+	fadeOut(toppic, 10, 0);
+	toppic.style.backgroundImage = "url(images/sc1.jpg)";
+	fadeIn(toppic, 10, 0);
+
+}
+function pic4change(){
+	fadeOut(toppic, 10, 0);
+	toppic.style.backgroundImage = "url(images/recrod.png)";
+	fadeIn(toppic, 10, 0);
+
+}
+function pic4changeback(){
+	fadeOut(toppic, 10, 0);
+	toppic.style.backgroundImage = "url(images/sc1.jpg)";
+	fadeIn(toppic, 10, 0);
+
+}
+function pic5change(){
+	fadeOut(toppic, 10, 0);
+	toppic.style.backgroundImage = "url(images/2018061920x5301.jpg)";
+	fadeIn(toppic, 10, 0);
+
+}
+function pic5changeback(){
+	fadeOut(toppic, 10, 0);
+	toppic.style.backgroundImage = "url(images/sc1.jpg)";
+	fadeIn(toppic, 10, 0);
+
+}
+
+function com1on(){
+	//dn.innerHTML = '<img src = "123/西甲/21.png"><img src = "123/西甲/athletic-bilbao-logo-png.png"><img src = "123/西甲/athletic-club-madrid-01-logo-png-transparent.png"><img src = "123/西甲/Real-Madrid-logo.png">'
+	<!-- fadeOut(com2, 0.01, 0.2); -->
+	<!-- fadeOut(com3, 0.01, 0.2); -->
+	<!-- fadeOut(com4, 0.01, 0.2); -->
+	<!-- fadeOut(com5, 0.01, 0.2); -->
+	fadeIn(com1, 0.01, 1);
+	document.getElementById("Layer3").style.display = "block";
+	document.getElementById("Layer3").innerHTML = "<p>西班牙足球甲級聯賽(Primera división de Liga，簡稱 La Liga)，通常簡稱「西甲」，是西班牙最高等級的職業足球聯賽，也是歐洲及世界最高水準的職業足球聯賽。目前西甲有 20 支球隊，聯賽成績最差的三隊將會降級到西班牙乙級聯賽，乙級聯賽的前三名則晉升到西班牙甲級聯賽。西甲聯賽的球風注重技術與進攻，具有很強的觀賞性。按國際足總和歐洲足總的官方積分，西甲曾經多年位於積分榜的首位。</p>";
+
+}
+function com1off(){
+//	dn.innerHTML = " ";
+	<!-- fadeIn(com2, 0.01, 1); -->
+	<!-- fadeIn(com3, 0.01, 1); -->
+	<!-- fadeIn(com4, 0.01, 1); -->
+	<!-- fadeIn(com5, 0.01, 1); -->
+	fadeOut(com1, 0.01, 0.2);
+	document.getElementById("Layer3").style.display = "none";
+}
+
+function com2on(){
+	//dn.innerHTML = '<img src = "123/英超/1200px-Liverpool_FC.svg.png"><img src = "123/英超/Arsenal-logo.png"><img src = "123/英超/Chelsea-logo.png"><img src = "123/英超/Manchester-City-logo.png"><img src = "123/英超/manchester-united-logo-png-transparent.png">'
+	fadeIn(com2, 0.01, 1);
+	document.getElementById("Layer3").style.display = "block";
+	document.getElementById("Layer3").innerHTML = "<p>英格蘭足球超級聯賽（Premier League），通常稱為英超，是英格蘭足球最高等級的賽事類別，由英格蘭足球總會於1992年2月20日確立，自1992-93球季面世。英超共有 20 支參賽球隊，運作模式為一所以 20 間球會共同擁有的有限公司。英超是全世界最多人觀看的聯賽。在全球各地，212個地區有電視轉播英超賽事，潛在觀眾約有47億人。2014-15賽季，英超球會的球場平均入場人數超過3.6萬人，僅次於德國甲組足球聯賽的4.35萬人。</p>";
+}
+function com2off(){
+//	dn.innerHTML = " ";
+	fadeOut(com2, 0.01, 0.2);
+	document.getElementById("Layer3").style.display = "none";
+}
+
+function com3on(){
+	//dn.innerHTML = '<img src = "123/西甲/21.png"><img src = "123/西甲/athletic-bilbao-logo-png.png"><img src = "123/西甲/athletic-club-madrid-01-logo-png-transparent.png"><img src = "123/西甲/Real-Madrid-logo.png">'
+	fadeIn(com3, 0.01, 1);
+	document.getElementById("Layer3").style.display = "block";
+	document.getElementById("Layer3").innerHTML = "<p>足球聯邦聯賽（德語：Fußball-Bundesliga）通常稱為德國甲級足球聯賽或簡稱德甲，是德國足球最高等級的賽事類別，由德國足球協會於1962年7月28日在多特蒙德確立，自1963-64球季面世。作為歐洲五大聯賽之一，德甲在歐洲足總的聯賽係數排名中目前位居全歐第2。德甲也是全球平均上座人數最高的足球聯賽。</p>";
+}
+function com3off(){
+//	dn.innerHTML = " ";
+	fadeOut(com3, 0.01, 0.2);
+	document.getElementById("Layer3").style.display = "none";
+}
+
+function com4on(){
+	//dn.innerHTML = '<img src = "123/西甲/21.png"><img src = "123/西甲/athletic-bilbao-logo-png.png"><img src = "123/西甲/athletic-club-madrid-01-logo-png-transparent.png"><img src = "123/西甲/Real-Madrid-logo.png">'
+	fadeIn(com4, 0.01, 1);
+	document.getElementById("Layer3").style.display = "block";
+	document.getElementById("Layer3").innerHTML = "<p>義大利足球甲級聯賽（Lega Serie A）簡稱「義甲」，是義大利最高等級的職業足球聯賽，由義大利足球協會所管理，義甲職業聯盟運營。義甲參賽球隊於 2004–05 球季開始由 18 隊增加至 20 隊，以雙循環方式比賽。義大利足球聯賽最初始於1898年，當時分為各個地區聯賽，各個地區冠軍以淘汰制附加賽形式決定總冠軍，首屆冠軍由熱那亞奪得。義甲曾經是世界上水平最高的職業足球聯賽之一，其特點為注重防守，並且球星雲集，在1990年世界盃足球賽過後，更是被譽為「小世界盃」。但在1990年代後期西甲、英超相繼崛起後，義甲的影響力日益下降。</p>";
+}
+function com4off(){
+	//dn.innerHTML = " ";
+	fadeOut(com4, 0.01, 0.2);
+	document.getElementById("Layer3").style.display = "none";
+}
+
+function com5on(){
+//	dn.innerHTML = '<img src = "123/西甲/21.png"><img src = "123/西甲/athletic-bilbao-logo-png.png"><img src = "123/西甲/athletic-club-madrid-01-logo-png-transparent.png"><img src = "123/西甲/Real-Madrid-logo.png">'
+	fadeIn(com5, 0.01, 1);
+	document.getElementById("Layer3").style.display = "block";
+	document.getElementById("Layer3").innerHTML = "<p>法國足球甲級聯賽（Championnat de France de football Ligue 1）簡稱「法甲」或「 Ligue 1 」是法國最高級別職業足球聯賽，由法國足球協會所組織。一直以來法甲聯賽較少產生一支長期雄霸聯賽的超級強隊（不計里昂自2002年起到2008年期間七度稱霸和巴黎聖日耳曼自2013年起六年五冠），而即使是法國本土球星，亦是外流至其他歐洲豪門居多。但隨著九十年代多支法甲俱樂部冒起，如巴黎聖日耳曼於1996年贏過歐洲盃賽冠軍盃，馬賽更在1993年贏過歐冠盃，法甲聯賽水平已大為提升。</p>";
+}
+function com5off(){
+	//dn.innerHTML = " ";
+	fadeOut(com5, 0.01, 0.2);
+	document.getElementById("Layer3").style.display = "none";
+}
+
+function allcomoff(){
+
+	dn.innerHTML = " ";
+
+}
+
+
+function changepage1()
+{
+	var ex = document.getElementById("extra");
+	
+	ex.innerHTML = '<div id = "123">'+
+					'<div class="column4">'+
+					'	<img src = "123/西甲/11.png"  id = "com1" onclick = "com1all()">'+
+					'	<p>西班牙甲級足球聯賽</p>'+
+					'</div>'+
+
+					'<div class="column4" >'+
+					'	<img src = "123/英超/Premier_League_Logo.png" id = "com2" onclick = "com2all()">'+
+					'	<p>英格蘭足球超級聯賽</p>'+
+					'</div>'+
+					'<div class="column4" >'+
+					'	<img src = "123/德甲/1.png" id = "com3" onclick = "com3all()">'+
+					'	<p>德國甲級足球聯賽</p>'+
+					'</div>'+
+					'<div class="column4">'+
+					'	<img src = "123/意甲/1.png" id = "com4" onclick = "com4all()">'+
+					'	<p>義大利甲級足球聯賽</p>'+
+					'</div>'+
+					'<div class="column4">'+
+					'	<img src = "123/法甲/Ligue_1_logo.svg" id = "com5" onclick = "com5all()">'+
+					'	<p>法國甲級足球聯賽</p>'+
+					'</div>'+
+					
+					'<div  id = "down">'+
+						
+						
+					
+					'</div>'+
+					'</div>';
+				changepage1prepare();
+
+
+}
+function changepage1prepare()
+{
+	com1 = document.getElementById("com1");
+	com2 = document.getElementById("com2");
+	com3 = document.getElementById("com3");
+	com4 = document.getElementById("com4");
+	com5 = document.getElementById("com5");
+	dn = document.getElementById("down");
+	var allcom = document.getElementById("extra");
+	 fadeOut(com1, 0.8, 0.2); 
+	 fadeOut(com2, 0.8, 0.2); 
+	 fadeOut(com3, 0.8, 0.2); 
+	 fadeOut(com4, 0.8, 0.2); 
+	 fadeOut(com5, 0.8, 0.2);
+	com1.addEventListener("mouseover", function( event ) {  com1on() ; }, false); 
+	com1.addEventListener("mouseout", function( event ) { com1off() ; }, false); 
+	com2.addEventListener("mouseover", function( event ) {  com2on() ; }, false); 
+	com2.addEventListener("mouseout", function( event ) {  com2off() ; }, false); 
+	com3.addEventListener("mouseover", function( event ) { com3on()  ; }, false); 
+	com3.addEventListener("mouseout", function( event ) {  com3off() ; }, false); 
+	com4.addEventListener("mouseover", function( event ) {com4on() ; }, false); 
+	com4.addEventListener("mouseout", function( event ) {  com4off(); }, false); 
+	com5.addEventListener("mouseover", function( event ) { com5on()  ; }, false); 
+	com5.addEventListener("mouseout", function( event ) {  com5off() ; }, false); 
+	allcom.addEventListener("mouseout", function( event ) {  allcomoff() ; }, false);
+	
+}
+
+
+function changepage2(){
+var ex = document.getElementById("extra");
+	
+	ex.innerHTML = '<div class="column4">'+
+					'	<a href = "#extra" onclick = "changepage21()"><img src = "legend/Beckenbauer1.png">'+
+					'	<p>Beckenbauer</p>'+
+					'	</a>'+
+					'</div>'+
+					
+					'<div class="column4">'+
+					'	<a href = "#extra" onclick = "changepage22()"><img src = "legend/Beckham1.png">'+
+					'	<p>Beckham</p>'+
+					'	</a>'+
+					'</div>'+
+					'<div class="column4">'+
+					'	<a href = "#extra" onclick = "changepage23()"><img src = "legend/Iniesta1.png">'+
+					'	<p>Iniesta</p>'+
+					'	</a>'+
+					'</div>'+
+					'<div class="column4">'+
+					'	<a href = "#extra" onclick = "changepage24()"><img src = "legend/Kaká1.png">'+
+					'	<p>Kaká</p>'+
+					'	</a>'+
+					'</div>'+
+					'<div class="column4">'+
+					'	<a href = "#extra" onclick = "changepage25()"><img src = "legend/maradona1.png">'+
+					'	<p>Maradona</p>'+
+					'	</a>'+
+					'</div>'+
+					'<div class="column4">'+
+					'	<a href = "#extra" onclick = "changepage26()"><img src = "legend/pele1.png">'+
+					'	<p>Pele</p>'+
+					'	</a>'+
+					'</div>'+
+					'<div class="column4">'+
+					'	<a href = "#extra" onclick = "changepage27()"><img src = "legend/Ronaldinho1.png">'+
+					'	<p>Ronaldinho</p>'+
+					'	</a>'+
+					'</div>'+
+					'<div class="column4">'+
+					'	<a href = "#extra" onclick = "changepage28()"><img src = "legend/Ronaldo Luís Nazário1.png">'+
+					'	<p>Ronaldo Luís Nazário</p>'+
+					'	</a>'+
+					'</div>'+
+					'<div class="column4">'+
+					'	<a href = "#extra" onclick = "changepage29()"><img src = "legend/Xavi1.png">'+
+					'	<p>Xavi</p>'+
+					'	</a>'+
+					'</div>'+
+					'<div class="column4">'+
+					'	<a href = "#extra" onclick = "changepage210()"><img src = "legend/Zidane1.png">'+
+					'	<p>Zidane</p>'+
+					'	</a>'+
+					'</div>';
+}
+function changepage3(){
+var ex = document.getElementById("extra");
+	
+	ex.innerHTML = '<div class="column4">'+
+					'	<a href = "#extra" onclick = "changepage31()"><img src = "123/trophy/大力金盃.png">'+
+					'	<p>國際足總世界盃</p></a>'+
+					'</div>'+
+					'<div class="column4">'+
+					'	<a href = "#extra" onclick = "changepage32()"><img src = "123/trophy/歐冠盃.png">'+
+					'	<p>歐洲冠軍俱樂部盃</p></a>'+
+					'</div>'+
+					'<div class="column4">'+
+					'	<a href = "#extra" onclick = "changepage33()"><img src = "123/trophy/歐洲杯.png">'+
+					'	<p>歐洲足球錦標賽</p></a>'+
+					'</div>'+
+					'<div class="column4">'+
+					'	<a href = "#extra" onclick = "changepage34()"><img src = "123/trophy/美洲盃.png">'+
+					'	<p>美洲盃足球賽</p></a>'+
+					'</div>';
+
+}
+function changepage4(){
+var ex = document.getElementById("extra");
+	
+	ex.innerHTML = '<div class="column4">'+
+					'	<a href = "#extra" onclick = "changepage41()"><img src = "123/trophy/大力金盃.png">'+
+					'	<p>最多世界盃</p>'+
+					'	</a>'+
+					'</div>'+
+					'<div class="column4">'+
+					'	<a href = "#extra" onclick = "changepage42()"><img src = "123/most score.jpg">'+
+					'	<p>單場比賽最高比分</p>'+
+					'	</a>'+
+					'</div>'+
+					'<div class="column4">'+
+					'	<a href = "#extra"  onclick = "changepage43()"><img src = "123/goal.png">'+
+					'	</a>'+
+					'	<p>職業生涯個人最高入球數</p>'+
+					'</div>'+
+					'<div class="column4">'+
+					'	<a href = "#extra" onclick = "changepage44()"><img src = "123/spectator.jpg">'+
+					'	<p>單場比賽最高入座人數</p>'+
+					'	</a>'+
+					'</div>'+
+					'<div class="column4">'+
+					'	<a href = "#extra" onclick = "changepage45()"><img src = "123/Rogério Ceni.png">'+
+					'	<p>職業生涯個人最高出場數</p>'+
+					'	</a>'+
+					'</div>';
+
+}
+function changepage5(){
+var ex = document.getElementById("extra");
+
+	
+	ex.innerHTML = '<div class="column4"><a href = "#extra" onclick = "changepage51()">'+
+					'<img src = "123/ctfa.png">'+
+					'</a>'+
+				'</div>'+
+				'<div>'+
+				'	<p>中華台北男子足球代表隊</p>'+
+				'	<p>台灣的足球自1971與香港的協議以及政治因素等關係長期積弱，再加上大眾普遍對棒球的關注，使足球在台灣難以發展。</p>'+
+				'	<p>然而受到各大賽事的熱情感染，國內足球熱潮逐漸加溫，於2011年7月3日台北田徑場舉行的2014年世界盃外圍賽亞洲區第一輪賽事對戰馬來西亞的比</p>'+
+				'	<p>賽，湧進了破紀錄的1萬5千餘人進場觀賽。之後更是在英格蘭籍新教練-蓋瑞·懷特的帶領下，先是在19年亞洲杯資格賽擊敗強敵巴林，</p>'+
+				'	<p>並且率領眾多旅外好手持續刷新台灣足球的世界排名。</p>'+
+				'</div>';
+
+}
+
+function changepage21(){
+	var ex = document.getElementById("extra");
+	
+	ex.innerHTML = '<div class="column4">'+
+						'<img src = "legend/Beckenbauer2.png"  onclick = "changepage2()">'+
+					'</div>'+
+					'<p>弗朗茨·安東·貝肯鮑爾（Franz Anton Beckenbauer）</p>'+
+					'<p>德國職業足球員、教練及總教練，他和球王貝利被公認為是近代足球歷史上最傑出的兩位人物。</p>'+
+					'<p>是世界球壇中的傳奇巨星之一。因為貝肯鮑爾的存在，足球史上留下了一個特殊的場上位置：進攻型清道夫(attacking sweeper)，或稱自由人。</p>'+
+					'<p>他被FIFA國際足總和全世界輿論公認為「足球皇帝」（Der Kaiser）。</p>'+
+					'<p>2004年，他位列球王比利評選的125位最出色的在世球星（FIFA 100）中。</p>';
+	
+}
+function changepage22(){
+	var ex = document.getElementById("extra");
+	
+	ex.innerHTML = '<div class="column4">'+
+						'<img src = "legend/Beckham2.png"  onclick = "changepage2()">'+
+					'</div>'+
+					'<p>大衛·勞勃·約瑟夫·貝克漢（David Robert Joseph Beckham )</p>'+
+					'<p>已退役英格蘭職業足球員、前英格蘭足球代表隊隊長。貝克漢出生於倫敦雷頓斯通，司職右中場，職業生涯在英超俱樂部曼聯開始，17歲起為該隊上場</p>'+
+					'<p>球場上貝克漢最為著名的是其「黃金右腳」，能夠精準地進行遠距離長傳、傳中及極其悅目的自由球攻門，</p>'+
+					'<p>無論在俱樂部或是在英格蘭足球代表隊生涯中，都藉此獲得了大量助攻和進球。</p>'+
+					'<p>克漢不僅僅是名著名球員，由於他擁有突出外表、百變髮型及正面的形象，以至自己品牌的男士香水等商品，及長期擔任運動品牌愛迪達的代言人，</p>'+
+					'<p>因此對大眾傳播媒介和時尚界等方面都具很大的影響力，在足球圈外所獲得的認受程度可謂前所未見。</p>';
+	
+}
+function changepage23(){
+	var ex = document.getElementById("extra");
+	
+	ex.innerHTML = '<div class="column4">'+
+						'<img src = "legend/Iniesta2.png"  onclick = "changepage2()">'+
+					'</div>'+
+					'<p>安德烈斯·伊涅斯塔·盧漢（Andrés Iniesta Luján）</p>'+
+					'<p>西班牙足球運動員，世界足壇最佳中場巨星之一。司職中場，出身巴塞隆納的拉瑪西亞青訓營。</p>'+
+					'<p>出道後一直效力西甲球隊巴塞隆納至2018年5月。他與哈維搭擋中路更被譽為是當代最穩健、最令歐洲列強恐懼的一條中場線，</p>'+
+					'<p>被外界評為只要他們兩個在場上，就可以產生1+1=3的化學反應。</p>';
+	
+}
+function changepage24(){
+	var ex = document.getElementById("extra");
+	
+	ex.innerHTML = '<div class="column4">'+
+						'<img src = "legend/Kaká2.png"  onclick = "changepage2()">'+
+					'</div>'+
+					'<p>里卡多·伊澤克森·多斯桑托斯·雷特（Ricardo Izecson dos Santos Leite）通常稱為卡卡（Kaká）</p>'+
+					'<p>是一位已退役巴西足球運動員，世界足壇最佳巴西巨星之一。</p>'+
+					'<p>主要司職前腰。卡卡以溫文和善見稱，僅三度被罰紅牌離場。</p>'+
+					'<p>他雖然代言許多模特兒廣告，但從未捲入任何緋聞，亦是足球界著名的基督教徒，故公眾形像極佳，是聯合國世界糧食計劃署大使。</p>'+
+					'<p>。2008年《時代雜誌》當選最具影響力的100位名人。</p>'+
+					'<p>聖保羅副總裁卡洛斯曾說過：「卡卡除了是個天賦出眾的球員，在全巴西範圍內，他可以說是我見過的最有教養和文化的職業球員，也許這和他的家庭背景有關。」</p>';
+	
+}
+function changepage25(){
+	var ex = document.getElementById("extra");
+	
+	ex.innerHTML = '<div class="column4">'+
+						'<img src = "legend/Maradona2.png"  onclick = "changepage2()">'+
+					'</div>'+
+					'<p>迪亞哥·阿曼多·馬拉度納·弗朗哥（Diego Armando Maradona Franco）</p>'+
+					'<p>生於阿根廷首都布宜諾斯艾利斯，暱稱「世紀球王」、「球場上帝」，已退役的阿根廷足球運動員和教練，世界足球史上最優秀亦是最具爭議的球員。 </p>'+
+					'<p>是世界球壇中的傳奇巨星之一。馬拉度納是足球場上極富傳奇色彩且個性鮮明的「上帝」。</p>'+
+					'<p>1986年馬拉度納憑藉自己的一己之力率領阿根廷隊第二次獲得世界盃冠軍。並成為世界盃的助攻王（8次），同時創造世界盃過人（90次），及被侵犯次數最高紀錄（60次）。</p>'+
+					'<p>當年「球王」的巴西球員貝利掛靴之後，世界各地雖有優秀球星不斷湧現，但都難以同貝利比肩，直到馬拉杜納的出現，因此他又被稱為「新球王」。</p>';
+	
+}
+function changepage26(){
+	var ex = document.getElementById("extra");
+	
+	ex.innerHTML = '<div class="column4">'+
+						'<img src = "legend/PELE2.png"  onclick = "changepage2()">'+
+					'</div>'+
+					'<p>埃德遜·阿蘭德斯·多·納西門托Edison Arantes do Nascimento），暱稱比利（Pelé）</p>'+
+					'<p>巴西著名職業足球員，司職前鋒。是二十世紀最偉大的體育明星之一，被國際足總授予「球王(The King of football)」稱號。</p>'+
+					'<p>比利在職業生涯總共攻進驚人的1283個球（正式進球700個）。2004年FIFA國際足總百年慶典他與「足球皇帝」碧根鮑華共同獲得FIFA世紀最佳球員和足球名人大獎。</p>'+
+					'<p>2013年度國際足總頒獎禮在瑞士蘇黎世舉行。比利獲得首次頒發的國際足總榮譽金球獎，球王激動地淚灑現場。</p>'+
+					'<p>周日時報（Sunday Times）頭條更是刊登過：「您如何拼寫比利？上-帝。」</p>';
+					
+	
+}
+function changepage27(){
+	var ex = document.getElementById("extra");
+	
+	ex.innerHTML = '<div class="column4">'+
+						'<img src = "legend/Ronaldinho2.png"  onclick = "changepage2()">'+
+					'</div>'+
+					'<p>羅納度·德·阿西斯·莫雷拉（Ronaldo de Assis Moreira），通常被叫作羅納迪諾（Ronaldinho）</p>'+
+					'<p>出生於巴西阿雷格里港，是巴西最著名的足球運動員之一，現為西甲球隊巴塞隆納全球大使。</p>'+
+					'<p>由於他成名之前巴西已經有數名同樣名為Ronaldo的著名球員，故球迷把他暱稱為「小羅」，用以區別另一巴西球星「大羅」羅納度。</p>'+
+					'<p>羅納迪諾被譽為是最友善的球星，在球場上經常充滿笑容，表現熱情，加上沒有架子的性格，都吸引不少球迷追隨他，被喻為「快樂足球」的代表。</p>';
+					
+	
+}
+function changepage28(){
+	var ex = document.getElementById("extra");
+	
+	ex.innerHTML = '<div class="column4">'+
+						'<img src = "legend/Ronaldo Luís Nazário2.png"  onclick = "changepage2()">'+
+					'</div>'+
+					'<p>羅納度·路易斯·那扎里奧·德·利馬（Ronaldo Luís Nazário de Lima）</p>'+
+					'<p>巴西著名的足球運動員，司職前鋒。是世界球壇中的傳奇巨星之一。</p>'+
+					'<p>羅納度是1990年代至2000年代最成功的足球運動員之一，因為其強悍恐怖的攻擊力被冠以「外星人」稱號。</p>'+
+					'<p>羅納度曾三度當選世界足球先生、兩度獲得金球獎。</p>'+
+					'<p>羅納度超強悍的球風實際上對身體負擔極大（尤其是腳），導致羅納度傷病不斷，巔峰期相對短促。</p>';
+					
+	
+}
+function changepage29(){
+	var ex = document.getElementById("extra");
+	
+	ex.innerHTML = '<div class="column4">'+
+						'<img src = "legend/Xavi2.png"  onclick = "changepage2()">'+
+					'</div>'+
+					'<p>哈維爾·埃爾南德斯·克雷烏斯（Xavier Hernández Creus），通常稱作哈維（Xavi）</p>'+
+					'<p>西班牙足球運動員，世界足壇最佳西班牙巨星之一。</p>'+
+					'<p>司職中場，出身巴塞隆納的拉瑪西亞青訓營，出道後效力西甲球隊巴塞隆納17個賽季，巴塞隆納目前出陣紀錄的保持者，同時也是巴薩歷史上冠軍頭銜最多的球員。</p>'+
+					'<p>哈維以強大的組織力、豐富的創造力及手術刀般精準銳利的短傳直塞為人稱道，</p>'+
+					'<p>巔峰時期在巴薩及西班牙國家隊都是無可撼動的組織大腦，是足壇2000年後中場大師的代表人物之一。</p>';
+	
+}
+function changepage210(){
+	var ex = document.getElementById("extra");
+	
+	ex.innerHTML = '<div class="column4">'+
+						'<img src = "legend/Zidane2.png"  onclick = "changepage2()">'+
+					'</div>'+
+					'<p>席內丁·耶齊德·席丹（Zinedine Yazid Zidane）</p>'+
+					'<p>生於法國馬賽。是一名已退役的法國職業足球員，前西甲豪門皇家馬德里總教練。</p>'+
+					'<p>席丹曾為法國國家足球隊隊長，司職中場。是世界球壇中的傳奇巨星之一，法國足球史上最偉大球員。</p>'+
+					'<p>席丹乃三屆世界足球先生得主。2004年，他位列球王比利評選的125位最出色的在世球星（FIFA 100）中。</p>'+
+					'<p>2012年席丹當選法國歷史最佳運動員。2016年1月4日，席丹出任皇家馬德里總教練一職，並為皇馬拿下歐冠三連霸。</p>';
+					
+	
+}
+
+
+
+function changepage31(){
+	var ex = document.getElementById("extra");
+	
+	ex.innerHTML = '<div class="column4">'+
+					'	<a href = "https://zh.wikipedia.org/wiki/%E5%9C%8B%E9%9A%9B%E8%B6%B3%E5%8D%94%E4%B8%96%E7%95%8C%E7%9B%83" target = "_blank"><img src = "123/trophy/大力金盃.png">'+
+					'	<p>國際足總世界盃</p></a>'+
+					'</div>'+
+					'<p>FIFA World Cup 國際足總世界盃，又稱為世界盃，</p>'+
+					'<p>由世界足壇最高管理機構國際足球總會（FIFA）每四年舉辦一次。電視轉播觀眾遠遠超過奧運會，為世界上最受歡迎的體育盛會。</p>'+
+				'	<p>1930年為世界盃的首屆比賽，冠軍為烏拉圭隊；1942年和1946年因為世界大戰而停辦。</p>'+
+					'<p>現今已舉辦的 20 屆賽事中，共有8個國家曾贏得冠軍。巴西隊是唯一打進全部 20 屆決賽圈之球隊，共贏得 5 次冠軍。</p>'+
+				'	<p></p>'+
+				'	<p>奪冠次數:</p>'+
+				'	<p><img src = "123/flag/Brazil.png" style = "width:20px;height:15px">巴西: 5 (1958，1962，1970，1994，2002)</p>'+
+				'	<p><img src = "123/flag/Germany.png" style = "width:20px;height:15px">德國: 4 (1954，1974，1990，2014)</p>'+
+				'	<p><img src = "123/flag/Italy.png" style = "width:20px;height:15px">義大利: 4 (1934，1938，1982，2006)</p>'+
+				'	<p><img src = "123/flag/Argentina.png" style = "width:20px;height:15px">阿根廷: 2 (1978，1986) <img src = "123/flag/Uruguay.png" style = "width:20px;height:15px">烏拉圭: 2 (1930，1950)</p>'+
+				'	<p><img src = "123/flag/France.png" style = "width:20px;height:15px">法國: 1  (1998) <img src = "123/flag/England.png" style = "width:20px;height:15px">英格蘭: 1  (1996) <img src = "123/flag/Spain.png" style = "width:20px;height:15px">西班牙: 1  (2010)</p>';
+					
+}
+function changepage32(){
+	var ex = document.getElementById("extra");
+	
+	ex.innerHTML = '<div class="column4">'+
+					'	<a href = "https://zh.wikipedia.org/wiki/%E6%AD%90%E6%B4%B2%E5%86%A0%E8%BB%8D%E7%90%83%E6%9C%83%E7%9B%83" target = "_blank"><img src = "123/trophy/歐冠盃.png">'+
+					'	<p>歐洲冠軍俱樂部盃</p></a>'+
+					'</div>'+
+					"<p>European Champion Clubs' Cup歐洲冠軍俱樂部盃，簡稱歐冠盃</p>"+
+					'<p>是頒發給足球賽事歐洲冠軍聯賽冠軍球隊的獎盃。據歐洲足球協會聯盟（UEFA）在2009年前的規定，凡是贏得5次冠軍或者是連續贏得三屆冠軍的球隊，</p>'+
+					'<p>均可永久保存一座獎盃。09年後，歐洲足總取消了球隊能永久保存獎盃的規則，當屆冠軍即可領取一個刻有球隊名稱的複製版獎盃。</p>'+
+					'<p>此外，球隊可在之後的賽季穿上印有「榮譽臂章」（Badge of Honour）的球衣參賽。</p>'+
+					'<p>2009取消永久保留獎盃條例前，有5支球隊能夠永久保留歐洲冠軍聯賽獎盃，分別為:</p>'+
+					'<p><img src = "123/flag/Spain.png" style = "width:20px;height:15px">皇家馬德里在1966年贏得第六次冠軍<img src = "123/flag/Netherlands.png" style = "width:20px;height:15px">阿賈克斯於1973年完成三連冠</p>'+
+					'<p><img src = "123/flag/Germany.png" style = "width:20px;height:15px">拜仁慕尼黑於1976完成三連冠<img src = "123/flag/Italy.png" style = "width:20px;height:15px">AC米蘭在1994年贏得第五次冠軍</p>'+
+					'<p><img src = "123/flag/England.png" style = "width:20px;height:15px">利物浦在2005年贏得第五次冠軍</p>';
+					
+}
+function changepage33(){
+	var ex = document.getElementById("extra");
+	
+	ex.innerHTML = '<div class="column4">'+
+					'	<a href = "https://zh.wikipedia.org/wiki/%E6%AC%A7%E6%B4%B2%E8%B6%B3%E7%90%83%E9%94%A6%E6%A0%87%E8%B5%9B" target = "_blank"><img src = "123/trophy/歐洲杯.png">'+
+					'	<p>歐洲足球錦標賽</p></a>'+
+				'	</div>'+
+				'	<p>UEFA European Football Championship歐洲國家盃，正式名稱為歐洲足球錦標賽簡稱歐錦賽、歐洲盃，</p>'+
+				'	<p>是一項由歐洲足總成員國間參加的最高級別國家級足球賽事，於1960年舉行第一屆，其後每四年舉行一屆。</p>'+
+				'	<p>該項賽事最初的目的是為了填補兩屆世界盃足球賽之間4年的空白，從而讓歐洲各國有更多的比賽機會。所有歐洲足總成員國如要參加歐洲國家盃決賽</p>'+
+				'	<p>圈，除了主辦國可以自動晉身決賽圈之外，其他球隊必須要參加外圍賽。由於歐洲足球錦標賽的規模及比賽質素僅次於世界盃足球賽，因此被人們稱為</p>'+
+				'	<p>缺少巴西和阿根廷的世界盃。</p>';
+					
+}
+function changepage34(){
+	var ex = document.getElementById("extra");
+	
+	ex.innerHTML = '<div class="column4">'+
+					'	<a href = "https://zh.wikipedia.org/wiki/%E7%BE%8E%E6%B4%B2%E7%9B%83%E8%B6%B3%E7%90%83%E8%B3%BD" target = "_blank"><img src = "123/trophy/美洲盃.png">'+
+					'	<p>美洲盃足球賽</p></a>'+
+					'</div>'+
+					'<p>Copa América美洲盃足球賽是一項由南美足協成員國參加最重要的國家級足球賽事，賽事前身名為南美足球錦標賽（Campeonato Sud Americano de</p>'+
+					'<p>Football），亦是全世界歷史最悠久的國家級足球賽事，在1916年7月2日至17日於阿根廷舉行首屆賽事，該屆賽事同時為了慶祝阿根廷獨立一百週年，安</p>'+
+					'<p>排在獨立日內進行賽事。通常每二年舉行一屆，但相隔舉行的時間常常出現變化，現在每4年舉行一屆。由於南美足協只有 10 支球隊，所以本賽事也是</p>'+
+					'<p>唯一不舉行資格賽的洲際國家級賽事。同時南美足協亦會邀請兩支非南美足協球隊參與賽事。</p>';
+					
+}
+
+
+
+
+
+function changepage41(){
+	var ex = document.getElementById("extra");
+	
+	ex.innerHTML = '<div class="column4">'+
+						'<img src = "123/trophy/大力金盃.png">'+
+					'</div>'+
+					'<p>成功奪下最多世界盃冠軍的國家為巴西，分別在1958，1962，1970，1994，2002共五次，最多奪冠次數的巴西甚至能永久保存第一代世界盃獎杯:雷米金盃。但1983年時，雷米金盃被盜，至今仍下落不明。</p>';
+				
+
+}
+function changepage42(){
+	var ex = document.getElementById("extra");
+	
+	ex.innerHTML = "<p>一場149:0的比賽。這場比賽發生在2002年10月31日，是一場屬於馬達加斯加國內比賽，比賽的球隊分別是AS Adema和SO l'Emyrne。最後勝利方為AS Adema，但這149分全是由SO l'Emyrne自己的球員製造，換言之-敗方奉獻了149個烏龍球。因SO l'Emyrne不滿球証於上一場比賽的執法，導致他們失去贏取冠軍的機會，故他們於這場比賽中以此作出抗議。賽後，SO l'Emyrne的領隊被罰停賽3年，另有4名球員亦被罰停賽。</p>";
+
+}
+function changepage43(){
+	var ex = document.getElementById("extra");
+	
+	ex.innerHTML = '<div class="column4">'+
+					'	<img src = "123/Josef Bican .jpg">'+
+					'</div>'+
+					'<p>多數人對此項紀錄的第一個反應一定是足球之王-比利，然而，比利甚至不是這個排行榜的前三名。這個紀錄的保持者是: 比根(Josef Bican)的1468顆進球數。比根於1913年9月25日出生，2001年12月12日逝世，是一名出生於奧地利的足球員。那時候的足球相對現在較為輕鬆，球員的職業生涯亦較長。現在，職業生涯能夠合共上陣1000場比賽近乎無可能。但比根同時擁有超乎常人的入球比，接近每場1.6個入球的紀錄。</p>'+
+					'<img src = "123/3In8Re3.png">';
+
+}
+function changepage44(){
+	var ex = document.getElementById("extra");
+	
+	ex.innerHTML = '<div class="column4">'+
+					'	<img src = "123/image.jpg">'+
+					'</div>'+
+					'<p>1950年世界杯決賽，巴西對烏拉圭。這場於巴西里約熱內盧馬拉簡拿運動場舉辦的世界杯決賽，在當時的賽制之下，主場球隊巴西只需要賽和烏拉圭便可以奪冠。然而，烏拉圭以2:1反勝巴西奪得史上第二座世界杯，成為巴西球迷心中的「馬拉卡納之痛(Maracanaço)」。除了這場比賽的戰果令巴西人一生難忘，這場比賽的入場人數亦創下了歷史紀錄。根據官方售票紀錄，當人持票入場的人數高達173850人，據非官方單位統計，總入場人數可能高達21萬人。</p>';
+
+}
+function changepage45(){
+	var ex = document.getElementById("extra");
+	
+	ex.innerHTML = '<div class="column4">'+
+					'	<img src = "123/Ceni.png">'+
+					'</div>'+
+					'<p>球王比利紀錄上一共上陣了1375場比賽，但當中包括了一些青年比賽以及預備組的賽事。官方的數字實為1115場比賽，這是一個很高的數字，卻並不是最高的。個人職業生涯總出場數最高的紀錄保持者，屬於巴西門將羅傑里奧·切尼。當中只曾為兩支球隊上陣。一是他代表的國家 - 巴西，另一個就是他唯一效力的球會 - 聖保羅。羅傑里奧·切尼同時擁有最門將多進球數的記錄，因為切尼是一個天生的領袖，能夠兼具進攻和防守的才華，他自由球技術高超，亦是聖保羅的點球劊子手，累積攻入130球（63球自由球及67球點球）。2015年12月7日，羅傑里奧宣布退役。</p>';
+					
+					
+
+}
+
+function changepage51(){
+	var ex = document.getElementById("extra");
+	
+	ex.innerHTML =' <table style = "float:left">'+
+					'<tr><td class="column5"><a href = "https://zh.wikipedia.org/wiki/%E4%B8%AD%E8%8F%AF%E5%8F%B0%E5%8C%97%E7%94%B7%E5%AD%90%E8%B6%B3%E7%90%83%E4%BB%A3%E8%A1%A8%E9%9A%8A" target="_blank">'+
+				'		<img src = "123/ctfa.png" class= "img1">'+
+				'		</a>'+
+				'	</td></tr>'+
+					
+				'	<tr><td class="column5"><a href = "https://zh.wikipedia.org/wiki/%E8%93%8B%E7%91%9E%C2%B7%E6%87%B7%E7%89%B9" target="_blank">'+
+				'		<img src = "123/CT/蓋瑞 懷特.png">'+
+				'		<td>蓋瑞·懷特（Gary John White，1974年7月25日－），英國籍足球經理，現任中華台北足球代表隊教練。蓋瑞·懷特出生於英國東南區漢普郡的南安普敦，並於2017年9月15日起擔任中華台北男子足球代表隊總教練。中華隊在懷特的整頓及帶領之下得到許多出人意表的勝利，因此被冠上了神奇教頭的稱號。其中最為人津津樂道的莫過於2017年亞州盃資格賽小組第4輪以2:1擊敗巴林一役，台灣以FIFA世界排名151擊敗世界排名100初的巴林，更令人訝異的是在此一個月前台灣還沒換教頭時才剛在小組賽第3輪以5:0敗給巴林。在如此短時間令中華隊大幅的進步可見懷特的執教實力。</td>'+
+				'		</a>'+
+				'	</td></tr>'+
+					
+				'	<tr><td class="column5"><a href = "https://zh.wikipedia.org/wiki/%E9%99%B3%E6%9F%8F%E8%89%AF_(%E8%B6%B3%E7%90%83%E9%81%8B%E5%8B%95%E5%93%A1)" target="_blank">'+
+				'		<img src = "123/CT/陳柏良.png">'+
+				'		<td>陳柏良（Chen Po-Liang，1988年8月11日－ ），是中華民國極少數具知名度的職業足球員，司職進攻中場及正中場，目前效力於中國甲級足球聯賽球隊杭州綠城，並是歷年來第一位加盟香港甲組足球聯賽及前兩位參加中國大陸職業聯賽的台灣職業足球員。於2009年4月在科倫坡對汶萊的比賽，締造個人國際賽第一次的帽子戲法。同年8月中，陳柏良更以21歲又4天之齡，成為中華台北史上最年輕的隊長。同時陳柏良為目前中華台北男子足球代表隊最多進球數擊出場樹的紀錄保持人，因此有台灣隊長的綽號。</td>'+
+				'		</a>'+
+				'	</td></tr>'+
+					
+				'	<tr><td class="column5"><a href = "https://zh.wikipedia.org/wiki/%E9%99%B3%E6%98%8C%E6%BA%90" target="_blank">'+
+				'		<img src = "123/CT/陳昌源.png">'+
+				'		<td>陳昌源（Xavier Chen，1983年10月5日－），出生在比利時貝爾克姆-聖阿加特，司職後衛，中法混血兒，擁有中華民國與比利時雙國籍，曾是中華台北足球代表隊的一員，曾效力於比利時甲級足球聯賽球隊梅赫倫，於2017年夏天退役。助攻能力極強，防守判斷出色，為人親切，廣受中華民國及比利時球迷愛戴。2009年秋天之前，陳昌源擁有中華民國血統這件事不為人所知，時任中華民國足協公關媒體組長陳家銘在玩線上足球遊戲時不經意發現Xavier Chen這名字，經過詢問得知真有其人。2011年7月3日，陳昌源首次代表中華台北出賽，在世界盃外圍賽次回合出戰馬來西亞，台北田徑場湧進15,335名現場觀眾，打破近年中華民國足壇紀錄。</td>'+
+				'		</a>'+
+				'	</td></tr>'+
+					
+				'	<tr><td class="column5"><a href = "https://zh.wikipedia.org/wiki/%E5%91%A8%E5%AE%9A%E6%B4%8B" target="_blank">'+
+				'		<img src = "123/CT/周定洋.png">'+
+				'		<td>Timothy Alexander Chow，1994年1月18日－，中文名周定洋，是一名英格蘭足球運動員，祖父來自浙江鄞縣，20世紀40年代末期遷居英國，是華裔第三代，於2017年入籍台灣代表中華台北足球代表隊出賽，目前效力於蘇格蘭足球超級聯賽的羅斯郡，位置中場。2017年，周定洋順利取得中華民國護照，得以代表中華台北出賽，並且完成國家隊首秀。2018年亞洲盃外圍賽主場對戰新加坡，原先預計徵召周定洋出賽，卻遭足協通知未於3月20日報到而解召。周定洋以與總教練蓋瑞·懷特於通訊軟體上的通訊紀錄證明獲准於3月23日報到，然而足協與懷特仍執意解召，周定洋對此表示失望並認為和足協在報到程序上未達成共識所致。</td>'+
+				'		</a>'+
+				'	</td>'+
+					
+				'	<tr><td class="column5"><a href = "https://zh.wikipedia.org/wiki/%E9%99%B3%E6%B5%A9%E7%91%8B" target="_blank">'+
+				'		<img src = "123/CT/陳浩瑋.png">'+
+				'		<td>陳浩瑋（Chen Hao-wei，1992年4月30日－），台灣職業足球員，阿美族，司職中場，目前效力於中國甲級足球聯賽球隊北京北控。2011年初，他代表中華台北奧運男子足球隊參加2012年奧運足球比賽亞洲區男子資格賽第一輪比賽，最終中華台北兩回合0比3不敵約旦國奧隊而被淘汰。2012年12月1日，在香港舉行的2013年東亞盃資格賽，於對朝鮮的比賽第79分鐘踢進個人在國家隊的第一球，也是中華台北隊整場比賽中唯一進球。</td>'+
+				'		</a>'+
+				'	</td>'+
+				'	</tr>'+
+				'	<tr><td class="column5"><a href = "https://zh.wikipedia.org/wiki/%E6%9C%B1%E6%81%A9%E6%A8%82" target="_blank">'+
+				'		<img src = "123/CT/朱恩樂.png">'+
+				'		<td>朱恩樂（Onur Doğan，1987年9月8日－），出生在土耳其的恰納卡萊， 目前效力於台灣企業甲級足球聯賽球會大同足球隊，司職前鋒，球風猛勁為台灣本土球員少有，因而有「土耳其火槍兵」的稱號。因與台灣籍妻子朱庭萱的相識，2010年時參加台灣的足球職業聯賽。2013年，朱恩樂決心選擇放棄土耳其國籍決定歸化為中華民國籍。因協助球隊奪得聯賽冠軍加持下，經過足協、內政部、體育署多方溝通與協助終於在2014年正式歸化為中華民國籍，成為中華民國足球史上第一名外籍歸化球員，也因此被台灣球迷稱作「台灣女婿」。</td>'+
+				'		</a>'+
+				'	</td>'+
+				'	</tr>'+
+				'	</table>';
+
+
+
+}
+
+
+
+
+function com1all()
+{	
+	document.getElementById("Layer3").style.display = "none";
+	var ex = document.getElementById("extra");
+	ex.innerHTML = '<div class="column4">'+
+					'	<a href = "#extra"><img src = "123/西甲/11.png" >'+
+					'	<p>西班牙甲級足球聯賽</p></a>'+
+					'</div>'+
+					
+					'<div class="column4">'+
+					'	<a href = "#extra"><img src = "123/西甲/21.png" onclick = "changepagecom11()" style = "width : 150px; height : 150px">'+
+					'	<p>巴塞隆納足球俱樂部</p></a>'+
+					'</div>'+
+					'<div class="column4">'+
+					'	<a href = "#extra"><img src = "123/西甲/athletic-bilbao-logo-png.png"  onclick = "changepagecom12()" style = "width : 150px; height : 150px">'+
+					'	<p>畢爾包競技俱樂部</p></a>'+
+					'</div>'+
+					'<div class="column4">'+
+					'	<a href = "#extra"><img src = "123/西甲/athletic-club-madrid-01-logo-png-transparent.png"  onclick = "changepagecom13()" style = "width : 150px; height : 150px">'+
+					'	<p>馬德里競技俱樂部</p></a>'+
+					'</div>'+
+					'<div class="column4">'+
+					'	<a href = "#extra"><img src = "123/西甲/Real-Madrid-logo.png"  onclick = "changepagecom14()" style = "width : 150px; height : 150px">'+
+					'	<p>皇家馬德里足球俱樂部</p></a>'+
+					'</div>'+
+					<!-- '<div class="column4">'+ -->
+					<!-- '	<img src = "123/blank.jpg">'+ -->
+					
+					<!-- '</div>'+ -->
+					'<div class="column4">'+
+					'	<a href = "#extra"><img src = "123/西甲/1.png"  onclick = "changepagecom15()" style = "width : 150px; height : 150px">'+
+					'	<p>安托萬·格里兹曼</p></a>'+
+					'</div>'+
+					'<div class="column4">'+
+					'	<a href = "#extra"><img src = "123/西甲/2.png"  onclick = "changepagecom16()" style = "width : 150px; height : 150px">'+
+					'	<p>克里斯蒂亞諾·羅納度·多斯桑托斯·阿維羅</p></a>'+
+					'</div>'+
+					'<div class="column4">'+
+					'	<a href = "#extra"><img src = "123/西甲/3.png"   onclick = "changepagecom17()" style = "width : 150px; height : 150px">'+
+					'	<p>萊納爾·安德烈斯·「萊奧」·梅西·庫西提尼</p></a>'+
+					'</div>';
+
+}
+function com2all()
+{
+	document.getElementById("Layer3").style.display = "none";
+	var ex = document.getElementById("extra");
+	ex.innerHTML = '<div class="column4">'+
+					'	<a href = "https://zh.wikipedia.org/wiki/%E5%9C%8B%E9%9A%9B%E8%B6%B3%E5%8D%94%E4%B8%96%E7%95%8C%E7%9B%83" target = "_blank"><img src = "123/英超/Premier_League_Logo.png">'+
+					'	<p>英格蘭超級足球聯賽</p></a>'+
+					'</div>'+
+					
+					'<div class="column4">'+
+					'	<a href = "#extra"><img src = "123/英超/1200px-Liverpool_FC.svg.png" onclick = "changepagecom21()" style = "width : 150px; height : 150px">'+
+					'	<p>利物浦足球俱樂部</p></a>'+
+					'</div>'+
+					'<div class="column4">'+
+					'	<a href = "#extra"><img src = "123/英超/Arsenal-logo.png" onclick = "changepagecom22()" style = "width : 150px; height : 150px">'+
+					'	<p>兵工廠足球俱樂部</p></a>'+
+					'</div>'+
+					'<div class="column4">'+
+					'	<a href = "#extra"><img src = "123/英超/Chelsea-logo.png" onclick = "changepagecom23()" style = "width : 150px; height : 150px">'+
+					'	<p>切爾西足球俱樂部</p></a>'+
+					'</div>'+
+					'<div class="column4">'+
+					'	<a href = "#extra"><img src = "123/英超/Manchester-City-logo.png" onclick = "changepagecom24()" style = "width : 150px; height : 150px">'+
+					'	<p>曼城足球俱樂部</p></a>'+
+					'</div>'+
+					<!-- '<div class="column4">'+ -->
+					<!-- '	<img src = "123/blank.jpg">'+ -->
+					
+					<!-- '</div>'+ -->
+					'<div class="column4">'+
+					'	<a href = "#extra"><img src = "123/英超/manchester-united-logo-png-transparent.png" onclick = "changepagecom25()" style = "width : 150px; height : 150px">'+
+					'	<p>曼徹斯特聯足球俱樂部</p></a>'+
+					'</div>'+
+					'<div class="column4">'+
+					'	<a href = "#extra"><img src = "123/英超/1.png" onclick = "changepagecom26()" style = "width : 150px; height : 150px">'+
+					'	<p>穆罕默德·沙拿·加利</p></a>'+
+					'</div>'+
+					'<div class="column4">'+
+					'	<a href = "#extra"><img src = "123/英超/2.png" onclick = "changepagecom27()" style = "width : 150px; height : 150px">'+
+					'	<p>梅蘇特·厄齊爾</p></a>'+
+					'</div>';
+
+}
+function com3all()
+{
+	document.getElementById("Layer3").style.display = "none";
+	var ex = document.getElementById("extra");
+	ex.innerHTML = '<div class="column4">'+
+					'	<a href = "https://zh.wikipedia.org/wiki/%E5%9C%8B%E9%9A%9B%E8%B6%B3%E5%8D%94%E4%B8%96%E7%95%8C%E7%9B%83" target = "_blank"><img src = "123/德甲/1.png">'+
+					'	<p>德國甲級足球聯賽</p></a>'+
+					'</div>'+
+					
+					'<div class="column4">'+
+					'	<a href = "#extra"><img src = "123/德甲/681px-SV-Werder-Bremen-Logo.svg.png" onclick = "changepagecom31()" style = "width : 150px; height : 150px">'+
+					'	<p>文達不來梅體育俱樂部</p></a>'+
+					'</div>'+
+					'<div class="column4">'+
+					'	<a href = "#extra"><img src = "123/德甲/2000px-FC_Bayern_München_logo_(2017).svg.png" onclick = "changepagecom32()" style = "width : 150px; height : 150px">'+
+					'	<p>拜仁慕尼黑足球俱樂部註冊協會</p></a>'+
+					'</div>'+
+					'<div class="column4">'+
+					'	<a href = "#extra"><img src = "123/德甲/Borussia_Mönchengladbach_logo.svg.png" onclick = "changepagecom33()" style = "width : 150px; height : 150px">'+
+					'	<p>門興格拉德巴赫體育俱樂部</p></a>'+
+					'</div>'+
+					'<div class="column4">'+
+					'	<a href = "#extra"><img src = "123/德甲/2.png" onclick = "changepagecom34()" style = "width : 150px; height : 150px">'+
+					'	<p>多特蒙德普魯士1909球類運動俱樂部註冊協會</p></a>'+
+					'</div>'+
+					<!-- '<div class="column4">'+ -->
+					<!-- '	<img src = "123/blank.jpg">'+ -->
+					
+					<!-- '</div>'+ -->
+					'<div class="column4">'+
+					'	<a href = "#extra"><img src = "123/德甲/3.png" onclick = "changepagecom35()" style = "width : 150px; height : 150px">'+
+					'	<p>曼紐爾·彼得·諾伊爾</p></a>'+
+					'</div>'+
+					'<div class="column4">'+
+					'	<a href = "#extra"><img src = "123/德甲/4.png" onclick = "changepagecom36()" style = "width : 150px; height : 150px">'+
+					'	<p>托瑪斯·穆勒</p></a>'+
+					'</div>'+
+					'<div class="column4">'+
+					'	<a href = "#extra"><img src = "123/德甲/5.png" onclick = "changepagecom37()" style = "width : 150px; height : 150px">'+
+					'	<p>阿揚·羅本</p></a>'+
+					'</div>';
+
+}
+function com4all()
+{
+	document.getElementById("Layer3").style.display = "none";
+	var ex = document.getElementById("extra");
+	ex.innerHTML = '<div class="column4">'+
+					'	<a href = "https://zh.wikipedia.org/wiki/%E5%9C%8B%E9%9A%9B%E8%B6%B3%E5%8D%94%E4%B8%96%E7%95%8C%E7%9B%83" target = "_blank"><img src = "123/德甲/1.png">'+
+					'	<p>義大利足球甲級聯賽</p></a>'+
+					'</div>'+
+					
+					'<div class="column4">'+
+					'	<a href = "#extra"><img src = "123/意甲/Milan Logo.png" onclick = "changepagecom41()" style = "width : 150px; height : 150px">'+
+					'	<p>國際米蘭足球俱樂部</p></a>'+
+					'</div>'+
+					'<div class="column4">'+
+					'	<a href = "#extra"><img src = "123/意甲/Juventus.png" onclick = "changepagecom42()" style = "width : 150px; height : 150px">'+
+					'	<p>尤文圖斯足球俱樂部</p></a>'+
+					'</div>'+
+					'<div class="column4">'+
+					'	<a href = "#extra"><img src = "123/意甲/AC Milan.png" onclick = "changepagecom43()" style = "width : 150px; height : 150px">'+
+					'	<p>米蘭足球俱樂部</p></a>'+
+					'</div>'+
+					'<div class="column4">'+
+					'	<a href = "#extra"><img src = "123/意甲/2.png" onclick = "changepagecom44()" style = "width : 150px; height : 150px">'+
+					'	<p>岡薩洛·赫拉爾多·伊瓜因</p></a>'+
+					'</div>'
+					<!-- '<div class="column4">'+ -->
+					<!-- '	<img src = "123/blank.jpg">'+ -->
+					
+					<!-- '</div>'+ -->
+					
+}
+function com5all()
+{
+	document.getElementById("Layer3").style.display = "none";
+	var ex = document.getElementById("extra");
+	ex.innerHTML = '<div class="column4">'+
+					'	<a href = "https://zh.wikipedia.org/wiki/%E5%9C%8B%E9%9A%9B%E8%B6%B3%E5%8D%94%E4%B8%96%E7%95%8C%E7%9B%83" target = "_blank"><img src = "123/法甲/Ligue_1_logo.svg">'+
+					'	<p>法國甲級足球聯賽</p></a>'+
+					'</div>'+
+					
+					'<div class="column4">'+
+					'	<a href = "#extra"><img src = "123/法甲/1200px-Olympique_de_Marseille_logo.svg.png" onclick = "changepagecom51()" style = "width : 150px; height : 150px">'+
+					'	<p>馬賽奧林匹克</p></a>'+
+					'</div>'+
+					'<div class="column4">'+
+					'	<a href = "#extra"><img src = "123/法甲/AS_Saint-Etienne-logo-BC6CB28590-seeklogo.com.png" onclick = "changepagecom52()" style = "width : 150px; height : 150px">'+
+					'	<p>聖德田競技俱樂部</p></a>'+
+					'</div>'+
+					'<div class="column4">'+
+					'	<a href = "#extra"><img src = "123/法甲/巴黎聖日耳曼足球俱樂部logo.png" onclick = "changepagecom53()" style = "width : 150px; height : 150px">'+
+					'	<p>巴黎聖日耳曼足球俱樂部</p></a>'+
+					'</div>'+
+					'<div class="column4">'+
+					'	<a href = "#extra"><img src = "123/法甲/1.png" onclick = "changepagecom54()" style = "width : 150px; height : 150px">'+
+					'	<p>小內馬爾·達席爾瓦·桑托斯</p></a>'+
+					'</div>'+
+					<!-- '<div class="column4">'+ -->
+					<!-- '	<img src = "123/blank.jpg">'+ -->
+					
+					<!-- '</div>'+ -->
+					'<div class="column4">'+
+					'	<a href = "#extra"><img src = "123/法甲/2.png" onclick = "changepagecom55()" style = "width : 150px; height : 150px">'+
+					'	<p>安赫爾·法比安·迪馬里亞·赫南德茲</p></a>'+
+					'</div>'+
+					'<div class="column4">'+
+					'	<a href = "#extra"><img src = "123/法甲/3.png" onclick = "changepagecom56()" style = "width : 150px; height : 150px">'+
+					'	<p>基利安·姆巴佩·洛天</p></a>'+
+					'</div>'+
+					'<div class="column4">'+
+					'	<a href = "#extra"><img src = "123/法甲/4.png" onclick = "changepagecom57()" style = "width : 150px; height : 150px">'+
+					'	<p>埃丁森·羅伯托·卡瓦尼·戈麥斯</p></a>'+
+					'</div>';
+					
+}
+
+
+function changepagecom11(){
+var ex = document.getElementById("extra");
+
+	
+	ex.innerHTML = '<div class="column4"><a href = "#extra" onclick = "com1all()">'+
+					'<img src = "123/西甲/21.png">'+
+					'</a>'+
+				'</div>'+
+				'<div>'+
+				'	<p>Paris Saint-Germain Football Club巴黎聖日耳曼足球俱樂部，簡稱Paris SG或PSG。</p>'+
+				'	<p>是位於法國首都巴黎的足球俱樂部，主場是可容納49,000名觀眾的王子公園體育場（Parc des Princes），現時在法國甲級足球聯賽比賽。</p>'+
+				'	<p>球隊在歷史上7次獲得法甲冠軍，並獲得過一次歐洲盃賽冠軍盃的錦標。</p>'+
+				'</div>';
+
+}
+function changepagecom12(){
+var ex = document.getElementById("extra");
+
+	
+	ex.innerHTML = '<div class="column4"><a href = "#extra" onclick = "com1all()">'+
+					'<img src = "123/西甲/athletic-bilbao-logo-png.png">'+
+					'</a>'+
+				'</div>'+
+				'<div>'+
+				'	<p>Athletic Club de Bilbao畢爾包競技俱樂部</p>'+
+				'	<p>是一家位於西班牙北部巴斯克自治區比斯開省畢爾包的足球俱樂部，成立於1898年[2]，是西班牙成立第二早的足球俱樂部。</p>'+
+				'	<p>俱樂部是西班牙甲級足球聯賽的創賽成員，自1928年以來從未降級。</p>'+
+				'	<p>同時擁有此項榮譽的只有皇家馬德里和巴塞隆納。</p>'+
+				'</div>';
+
+}
+function changepagecom13(){
+var ex = document.getElementById("extra");
+
+	
+	ex.innerHTML = '<div class="column4"><a href = "#extra" onclick = "com1all()">'+
+					'<img src = "123/西甲/athletic-club-madrid-01-logo-png-transparent.png">'+
+					'</a>'+
+				'</div>'+
+				'<div>'+
+				'	<p>Club Atlético de Madrid馬德里競技俱樂部，簡稱馬競。</p>'+
+				'	<p>是一家位於西班牙馬德里的足球俱樂部，成立於1903年4月26日，現時是西班牙甲級足球聯賽球隊之一。</p>'+
+				'	<p>馬德里競技是西甲聯賽中綜合實力第三強的球隊，奪冠次數、季票持有者數目和總收入僅排在同城死敵皇家馬德里和巴塞隆納之後。</p>'+
+				'</div>';
+
+}
+function changepagecom14(){
+var ex = document.getElementById("extra");
+
+	
+	ex.innerHTML = '<div class="column4"><a href = "#extra" onclick = "com1all()">'+
+					'<img src = "123/西甲/Real-Madrid-logo.png">'+
+					'</a>'+
+				'</div>'+
+				'<div>'+
+				'	<p>Real Madrid Club de Fútbol皇家馬德里足球俱樂部</p>'+
+				'	<p>是一家位於西班牙首都馬德里的足球俱樂部，成立於1902年3月6日，是世界球壇最成功的足球俱樂部之一。</p>'+
+				'	<p>皇家馬德里是目前贏得最多次西班牙甲級聯賽和歐洲冠軍聯賽冠軍的足球俱樂部。</p>'+
+				'</div>';
+
+}
+function changepagecom15(){
+var ex = document.getElementById("extra");
+
+	
+	ex.innerHTML = '<div class="column4"><a href = "#extra" onclick = "com1all()">'+
+					'<img src = "123/西甲/1.png">'+
+					'</a>'+
+				'</div>'+
+				'<div>'+
+				'	<p>Antoine Griezmann安托萬·格里兹曼</p>'+
+				'	<p>法國足球運動員，目前效力西甲球隊馬德里競技，現役法國國家足球隊隊員，司職邊鋒、影子前鋒。</p>'+
+				'	<p>他的職業生涯始於皇家社會，在2009年的首個賽季完成首秀和贏得該賽季西乙冠軍。</p>'+
+				'	<p>在皇家社會的5個賽季內，他的正式上場次數為201場並打進50球。</p>'+
+				'	<p>在2014年，他以3,000萬歐元加盟馬德里競技，目前而他在西甲已經射入超過75個進球。</p>'+
+				'</div>';
+
+}
+function changepagecom16(){
+var ex = document.getElementById("extra");
+
+	
+	ex.innerHTML = '<div class="column4"><a href = "#extra" onclick = "com1all()">'+
+					'<img src = "123/西甲/2.png">'+
+					'</a>'+
+				'</div>'+
+				'<div>'+
+				'	<p>克里斯蒂亞諾·羅納度·多斯桑托斯·阿維羅（葡萄牙語：Cristiano Ronaldo dos Santos Aveiro）</p>'+
+				'	<p>生於葡萄牙馬德拉豐沙爾，常簡稱為「C羅納度」，當今世界著名頂尖葡萄牙職業足球員。</p>'+
+				'	<p>司職邊鋒、中鋒；現效力於西甲豪門球隊皇家馬德里，同時也是現任葡萄牙國家足球隊隊長。</p>'+
+				'	<p>C羅於18歲時已加盟英超豪門曼聯，於2006年世界盃時揚名。</p>'+
+				'</div>';
+
+}
+function changepagecom17(){
+var ex = document.getElementById("extra");
+
+	
+	ex.innerHTML = '<div class="column4"><a href = "#extra" onclick = "com1all()">'+
+					'<img src = "123/西甲/3.png">'+
+					'</a>'+
+				'</div>'+
+				'<div>'+
+				'	<p>Lionel Andrés “Leo” Messi Cuccittini萊納爾·安德烈斯·「萊奧」·梅西·庫西提尼</p>'+
+				'	<p>生於阿根廷聖塔菲省羅薩里奧，擁有加泰隆尼亞及義大利血統[3]，當今世界著名頂尖阿根廷職業足球員。</p>'+
+				'	<p>現時為西班牙甲級足球聯賽豪門巴塞隆納的隊長。</p>'+
+				'	<p>場上主要擔任邊鋒，也可以擔任前鋒並回撤為前腰，這也是梅西和其他前鋒不同的地方。</p>'+
+				'	<p>梅西擅長用左腳，尤其以極為細膩的盤球技術、非凡的控球能力、豐富的創造力、難以置信的進球及助攻頻率而舉世聞名。</p>'+
+				'</div>';
+
+}
+
+
+function changepagecom21(){
+var ex = document.getElementById("extra");
+
+	
+	ex.innerHTML = '<div class="column4"><a href = "#extra" onclick = "com2all()">'+
+					'<img src = "123/英超/1200px-Liverpool_FC.svg.png">'+
+					'</a>'+
+				'</div>'+
+				'<div>'+
+				'	<p>Liverpool Football Club利物浦足球俱樂部</p>'+
+				'	<p>是一家位於英國英格蘭西北部默西賽德郡港口城市利物浦的英格蘭足球俱樂部，成立於1892年6月3日，主場在安菲爾德球場</p>'+
+				'	<p>目前國內所屬參賽級別為英格蘭超級聯賽。</p>'+
+				'	<p>利物浦曾在1970至1980年代稱霸英格蘭與歐洲足壇。與曼聯合稱「雙紅會」、「英格蘭德比」。</p>'+
+				'</div>';
+
+}
+function changepagecom22(){
+var ex = document.getElementById("extra");
+
+	
+	ex.innerHTML = '<div class="column4"><a href = "#extra" onclick = "com2all()">'+
+					'<img src = "123/英超/Arsenal-logo.png">'+
+					'</a>'+
+				'</div>'+
+				'<div>'+
+				'	<p>Arsenal Football Club兵工廠足球俱樂部，簡稱兵工廠</p>'+
+				'	<p>是一家設於倫敦霍洛威的英格蘭體育俱樂部，現在於英格蘭足球超級聯賽比賽。</p>'+
+				'	<p>兵工廠於1886年成立，起初俱樂部的名字為戴爾廣場足球俱樂部（Dial Square FC）。</p>'+
+				'	<p>1893年，俱樂部加入英格蘭足球聯賽系統，成為首支加入的南部俱樂部。</p>'+
+				'	<p>1904年，兵工廠首次升級至甲級聯賽，於聯賽累積的分數為第二多。</p>'+
+				'	<p>1913年，兵工廠歷史上首次，亦是唯一一次降級。</p>'+
+				'	<p>6年後，俱樂部重回頂級聯賽後一直停留至今，成為停留於頂級聯賽最長時間的英格蘭俱樂部。</p>'+
+				
+				'</div>';
+
+}
+function changepagecom23(){
+var ex = document.getElementById("extra");
+
+	
+	ex.innerHTML = '<div class="column4"><a href = "#extra" onclick = "com2all()">'+
+					'<img src = "123/英超/Chelsea-logo.png">'+
+					'</a>'+
+				'</div>'+
+				'<div>'+
+				'	<p>Chelsea Football Club切爾西足球俱樂部</p>'+
+				'	<p>是一間位於英格蘭首都倫敦的英格蘭俱樂部，現正在參加英格蘭足球超級聯賽。</p>'+
+				'	<p>切爾西足球俱樂部成立超過一百年，在1955年首次贏得英格蘭最頂級足球聯賽冠軍。</p>'+
+				
+				'</div>';
+
+}
+function changepagecom24(){
+var ex = document.getElementById("extra");
+
+	
+	ex.innerHTML = '<div class="column4"><a href = "#extra" onclick = "com2all()">'+
+					'<img src = "123/英超/Manchester-City-logo.png">'+
+					'</a>'+
+				'</div>'+
+				'<div>'+
+				'	<p>Manchester City Football Club曼城足球俱樂部，簡稱曼城</p>'+
+				'	<p>是一間位於曼徹斯特的足球俱樂部，前身為成立於1880年的聖馬可(St. Mark‘s)的足球隊。</p>'+
+				'	<p>1887年改名為阿德維克足球俱樂部(Ardwick Association Football Club)，直到1894年改名曼城。</p>'+
+				'	<p>上世紀八、九十年代，曼城只是一隊在英超與英甲之間浮沉的球隊。</p>'+
+				'	<p>直到2002年曼城再次從英甲升上英超後，才站穩英超席位。</p>'+
+				'</div>';
+
+}
+function changepagecom25(){
+var ex = document.getElementById("extra");
+
+	
+	ex.innerHTML = '<div class="column4"><a href = "#extra" onclick = "com2all()">'+
+					'<img src = "123/英超/manchester-united-logo-png-transparent.png">'+
+					'</a>'+
+				'</div>'+
+				'<div>'+
+				'	<p>Manchester United Football Club曼徹斯特聯足球俱樂部，簡稱曼聯，綽號紅魔鬼</p>'+
+				'	<p>英國英格蘭西北區域大曼徹斯特特拉福德市的足球俱樂部，前身為成立於1878年的「紐頓希斯LYR」（Newton Heath LYR F.C.）</p>'+
+				'	<p>1902年時改名為「曼徹斯特聯」，現在於英格蘭超級聯賽比賽。</p>'+
+				'	<p>曼聯是英格蘭乃至歐洲其中一間最成功的足球俱樂部。</p>'+
+				'	<p>論國內成績，曼聯是英格蘭贏得最多冠軍獎盃的俱樂部，同時保持著擁有英格蘭頂級聯賽、英格蘭足總盃及英格蘭社區盾最多冠軍的紀錄。</p>'+
+				'</div>';
+
+}
+function changepagecom26(){
+var ex = document.getElementById("extra");
+
+	
+	ex.innerHTML = '<div class="column4"><a href = "#extra" onclick = "com2all()">'+
+					'<img src = "123/英超/1.png">'+
+					'</a>'+
+				'</div>'+
+				'<div>'+
+				'	<p>مـحمـد صـلاح(Mohamed Salah Ghaly)穆罕默德·沙拿·加利</p>'+
+				'	<p>埃及職業足球員，現時效力於英超俱樂部利物浦</p>'+
+				'	<p>他同時是埃及國家隊成員，司職邊鋒或前鋒，有「埃及梅西」之稱。</p>'+
+				'	<p>2017年6月22日，沙拿以打破球隊記錄的3,690萬鎊轉會至英超球隊利物浦，同時他也是利物浦史上第一位埃及球員。</p>'+
+				'</div>';
+
+}
+function changepagecom27(){
+var ex = document.getElementById("extra");
+
+	
+	ex.innerHTML = '<div class="column4"><a href = "#extra" onclick = "com2all()">'+
+					'<img src = "123/英超/2.png">'+
+					'</a>'+
+				'</div>'+
+				'<div>'+
+				'	<p>Mesut Özil梅蘇特·厄齊爾</p>'+
+				'	<p>是一名土耳其裔的德國職業足球員，現時效力英格蘭足球超級聯賽俱樂部阿森納及德國國家足球隊。司職前腰。 </p>'+
+				'	<p>。 2006年，厄齊爾於家鄉俱樂部——德甲的沙爾克04開始其職業生涯，並於2008年改投另一間德甲俱樂部文達不來梅。</p>'+
+				'	<p>因在2010年世界盃有著出色的表現，西甲俱樂部皇家馬德里簽下厄齊爾。</p>'+
+				'	<p>2013年夏季轉會窗的最後一天，他以4250萬英鎊的身價轉會至英超俱樂部阿森納，成為歷史上最昂貴的德國職業足球員。</p>'+
+				'</div>';
+
+}
+
+
+function changepagecom31(){
+var ex = document.getElementById("extra");
+
+	
+	ex.innerHTML = '<div class="column4"><a href = "#extra" onclick = "com3all()">'+
+					'<img src = "123/德甲/681px-SV-Werder-Bremen-Logo.svg.png">'+
+					'</a>'+
+				'</div>'+
+				'<div>'+
+				'	<p>Sportverein Werder Bremen文達不來梅體育俱樂部</p>'+
+				'	<p<是一家位於德國不來梅的體育俱樂部，包含足球、手球、田徑、桌球、體操和西洋棋等部門。/p>'+
+				'	<p>俱樂部成立於1899年，現在大約擁有36500名會員。文達不來梅最知名的部門是它的職業足球隊，現在為德國足球甲級聯賽中的一支參賽球隊。</p>'+
+				'	<p>德國足球甲級聯賽於1963年成立之初，文達不來梅就是創始成員之一。</p>'+
+				'	<p>它曾經四度奪得德國足球冠軍、六度奪得德國足協盃冠軍，並曾經於1992年奪得歐洲盃賽冠軍盃。</p>'+
+				'</div>';
+
+}
+function changepagecom32(){
+var ex = document.getElementById("extra");
+
+	
+	ex.innerHTML = '<div class="column4"><a href = "#extra" onclick = "com3all()">'+
+					'<img src = "123/德甲/2000px-FC_Bayern_München_logo_(2017).svg.png">'+
+					'</a>'+
+				'</div>'+
+				'<div>'+
+				'	<p>Fußball-Club Bayern München eingetragener Verein拜仁慕尼黑足球俱樂部註冊協會，簡稱拜仁慕尼黑或拜仁</p>'+
+				'	<p>是一家設於巴伐利亞州（拜仁州）首府慕尼黑的德國體育俱樂部。</p>'+
+				'	<p>其最為人所熟知的的下屬部門是參加德甲聯賽、即德國足球聯賽系統的頂級賽事的職業足球隊，</p>'+
+				'	<p>這也是德國足球史上最成功的俱樂部，曾創紀錄的贏得28次德國足球冠軍及18次德國盃冠軍。</p>'+
+				'	<p>拜仁慕尼黑最早由弗朗茨·約翰率領11名職業足球員在1900年創立。</p>'+
+				'	<p>儘管曾在1932年贏得首次德國足球冠軍，但俱樂部卻並非德國甲級足球聯賽於1963年成立之初的創始成員。</p>'+
+				
+				'</div>';
+
+}
+function changepagecom33(){
+var ex = document.getElementById("extra");
+
+	
+	ex.innerHTML = '<div class="column4"><a href = "#extra" onclick = "com3all()">'+
+					'<img src = "123/德甲/Borussia_Mönchengladbach_logo.svg.png">'+
+					'</a>'+
+				'</div>'+
+				'<div>'+
+				'	<p>VfL Borussia Mönchengladbach門興格拉德巴赫體育俱樂部</p>'+
+				'	<p>於1900年8月1日成立，是位於德國北萊茵-威斯伐倫萊茵河以西的門興格拉德巴赫市的職業足球俱樂部，現時在德國甲級足球聯賽比賽。</p>'+
+				'	<p>於1970年代的黃金時期堅持全攻型的戰術而廣受全德國球迷的歡迎，</p>'+
+				'	<p>不過礙於球場容量細小及有限財力，難以長時期與財雄勢大的拜仁慕尼黑競爭。</p>'+
+				'	<p>門興格拉德巴赫在2004/2005賽季遷入可容53,000觀眾的普魯士公園球場。</p>'+
+				'</div>';
+
+}
+function changepagecom34(){
+var ex = document.getElementById("extra");
+
+	
+	ex.innerHTML = '<div class="column4"><a href = "#extra" onclick = "com3all()">'+
+					'<img src = "123/德甲/2.png">'+
+					'</a>'+
+				'</div>'+
+				'<div>'+
+				'	<p>Ballspiel-Verein Borussia 1909 e.V.多特蒙德普魯士1909球類運動俱樂部註冊協會</p>'+
+				'	<p>是位於德國魯爾區多特蒙德的足球俱樂部，於1909年12月19日在多特蒙德市成立。</p>'+
+				'	<p>多特蒙德在1997年曾經奪得過一次歐洲冠軍聯賽，這也是德甲除拜仁慕尼黑以外的球隊最近的一次獲得冠軍盃。</p>'+
+				'	<p>多特蒙德同拜仁慕尼黑之間的比賽被稱為「國家德比」，多特蒙德同沙爾克04之間的比賽被稱為「魯爾區德比」。</p>'+
+				'</div>';
+
+}
+function changepagecom35(){
+var ex = document.getElementById("extra");
+
+	
+	ex.innerHTML = '<div class="column4"><a href = "#extra" onclick = "com3all()">'+
+					'<img src = "123/德甲/3.png">'+
+					'</a>'+
+				'</div>'+
+				'<div>'+
+				'	<p>曼紐爾·彼得·諾伊爾（Manuel Peter Neuer）</p>'+
+				'	<p>是一名德國足球運動員，在場上司職守門員，德國國家足球隊隊長。</p>'+
+				'	<p>他現效力於德國甲級足球聯賽俱樂部拜仁慕尼黑，同時也代表德國國家足球隊參賽。</p>'+
+				'	<p>他以出色的反應能力，阻截能力，常常衝出禁區解圍及對球路的判斷而聞名。</p>'+
+				'	<p>曾隨德國隊贏得過2014年巴西世界盃冠軍並獲得當屆世界盃金手套獎。</p>'+
+				'	<p>諾伊爾於1991年3月1日加盟沙爾克04，並經歷了該俱樂部的各階段青年隊。</p>'+
+				'	<p>在他19歲以前，他已經可以偶爾代表俱樂部的二隊上陣。</p>'+
+				'	<p>2005年，諾伊爾與沙爾克04簽訂了職業合同，並且在隨後一個球季的德甲參賽名單中位列第三號門將。</p>'+
+				'</div>';
+
+}
+function changepagecom36(){
+var ex = document.getElementById("extra");
+
+	
+	ex.innerHTML = '<div class="column4"><a href = "#extra" onclick = "com3all()">'+
+					'<img src = "123/德甲/4.png">'+
+					'</a>'+
+				'</div>'+
+				'<div>'+
+				'	<p>Thomas Müller托瑪斯·穆勒</p>'+
+				'	<p>德國足球運動員，效力於德國甲級足球聯賽拜仁慕尼黑及德國國家足球隊，</p>'+
+				'	<p>司職前鋒，亦勝任其他攻擊型位置，包括前腰、第二前鋒及邊鋒，</p>'+
+				'	<p>憑藉其出色的速度、技術和沉著態度，以及穩定的進球率及創造進球機會的能力而廣受好評。</p>'+
+				'	<p>作為拜仁慕尼黑的青訓產物，穆勒在2009至10球季被時任總教練范加爾提拔至一線隊，</p>'+
+				'	<p>他在該球季幾乎參加了隊內的所有比賽，為球隊贏得了聯賽及盃賽雙冠王，並且晉身歐洲冠軍聯賽決賽。</p>'+
+				'</div>';
+
+}
+function changepagecom37(){
+var ex = document.getElementById("extra");
+
+	
+	ex.innerHTML = '<div class="column4"><a href = "#extra" onclick = "com3all()">'+
+					'<img src = "123/德甲/5.png">'+
+					'</a>'+
+				'</div>'+
+				'<div>'+
+				'	<p>Arjen Robben阿揚·羅本是一位荷蘭職業足球員</p>'+
+				'	<p>現效力於德甲俱樂部拜仁慕尼黑隊，同時也是前荷蘭國家隊隊長。</p>'+
+				'	<p>。世界足壇最佳荷蘭巨星之一。他代表荷蘭隊連續參加了2004年歐洲盃、2008年歐洲盃和2012年歐洲盃，以及2006年世界盃、2010年世界盃和2014年世界盃。</p>'+
+				'	<p>其精彩的表現更率領荷蘭國家隊奪得2014年世界盃季軍，同時榮膺FIFA世界盃銅球獎。</p>'+
+				'	<p>雖然羅本常被歸類於前鋒，但他主要司職邊鋒。他以帶球技巧、奔跑速度、傳中能力和從右路起左腳遠射而聞名。</p>'+
+				
+				'</div>';
+
+
+}
+
+function changepagecom41(){
+var ex = document.getElementById("extra");
+
+	
+	ex.innerHTML = '<div class="column4"><a href = "#extra" onclick = "com4all()">'+
+					'<img src = "123/意甲/Milan Logo.png">'+
+					'</a>'+
+				'</div>'+
+				'<div>'+
+				'	<p>國際米蘭足球俱樂部（Football Club Internazionale Milano），簡稱國際或國米。</p>'+
+				'	<p>是一家位於義大利北部倫巴第大區米蘭市的足球俱樂部，於1908年3月9日成立，現時屬於義大利甲級足球聯賽球隊之一。</p>'+
+				'	<p>國際米蘭的成立來自「米蘭板球與足球俱樂部」（即現時的AC米蘭）裡的一部分會員分流出來，其後自立門戶成立國際米蘭。</p>'+
+				'	<p>球衣由藍色和黑色兩種主要顏色組成。</p>'+
+				'	<p>因為俱樂部成立之初即向全世界所有球員敞開大門，而不僅限於義大利球員，所以稱之為「國際」俱樂部。</p>'+
+				'</div>';
+
+}
+function changepagecom42(){
+var ex = document.getElementById("extra");
+
+	
+	ex.innerHTML = '<div class="column4"><a href = "#extra" onclick = "com4all()">'+
+					'<img src = "123/意甲/Juventus.png">'+
+					'</a>'+
+				'</div>'+
+				'<div>'+
+				'	<p>尤文圖斯足球俱樂部（Juventus Football Club S.p.A），簡稱尤文</p>'+
+				'	<p>是一間位於義大利皮埃蒙特大區都靈市的足球俱樂部，成立於1897年11月1日，尤文圖斯傳統上的主場球衣是黑白直間衫及黑色或者白色短褲。</p>'+
+				'	<p>尤文圖斯是歷史上第一個實現三大盃大滿貫的俱樂部，是歐洲乃至世界足壇最成功的俱樂部之一。</p>'+
+
+				'</div>';
+
+}
+function changepagecom43(){
+var ex = document.getElementById("extra");
+
+	
+	ex.innerHTML = '<div class="column4"><a href = "#extra" onclick = "com4all()">'+
+					'<img src = "123/意甲/AC Milan.png">'+
+					'</a>'+
+				'</div>'+
+				'<div>'+
+				'	<p>米蘭足球俱樂部（Associazione Calcio Milan）是一支位於義大利米蘭的足球會。</p>'+
+				'	<p>俱樂部（Associazione Calcio Milan）是一支位於義大利米蘭的足球會。為了和同在米蘭的另一家足球俱樂部國際米蘭區別，一般被稱為AC米蘭。</p>'+
+				'	<p>AC米蘭的傳統隊服是紅黑相間的間條衫。 AC米蘭是義大利最受歡迎的足球俱樂部之一，</p>'+
+				'	<p>根據2010年德國著名體育市場調查公司Sport+Markt的調查，AC米蘭的球迷人數名列歐洲第七位，達到1840萬人，是歐洲最受歡迎的義大利球會。</p>'+
+				'	<p>AC米蘭是全世界獲得主要洲際和大洲俱樂部賽事冠軍最多的球隊（總共18次）。</p>'+
+
+				'</div>';
+
+}
+function changepagecom44(){
+var ex = document.getElementById("extra");
+
+	
+	ex.innerHTML = '<div class="column4"><a href = "#extra" onclick = "com4all()">'+
+					'<img src = "123/意甲/2.png">'+
+					'</a>'+
+				'</div>'+
+				'<div>'+
+				'	<p>岡薩洛·赫拉爾多·伊瓜因（Gonzalo Gerardo Higuaín）</p>'+
+				'	<p>是一位阿根廷足球運動員，司職前鋒及邊鋒，現時效力義甲俱樂部尤文圖斯，同時也是阿根廷國家隊的成員。</p>'+
+				'	<p>2016年7月26日，尤文圖斯以破義甲轉會費紀錄的9,000萬歐元成功從拿坡里購入伊瓜因，簽約五年，成為史上身價第三高的球員，</p>'+
+				'	<p>在加盟尤文的第一個賽季在聯賽打入24球名列射手榜第四名，獲得義甲與義大利盃雙冠。</p>'+
+
+				'</div>';
+}
+
+
+function changepagecom51(){
+var ex = document.getElementById("extra");
+
+	
+	ex.innerHTML = '<div class="column4"><a href = "#extra" onclick = "com5all()">'+
+					'<img src = "123/法甲/1200px-Olympique_de_Marseille_logo.svg.png">'+
+					'</a>'+
+				'</div>'+
+				'<div>'+
+				'	<p>Olympique de Marseille馬賽奧林匹克</p>'+
+				'	<p>位於法國東南部普羅旺斯首府、地中海最大的港口及法國第二大城市的馬賽的足球俱樂部，成立於1899年，現時在法國甲級足球聯賽比賽。</p>'+
+				'	<p>馬賽曾奪得9屆法國甲級聯賽冠軍及10次法國盃，於1993年歐聯決賽1-0擊敗AC米蘭，成為首支奪得歐洲冠軍的法國球隊。</p>'+
+				'	<p>但因在歐聯決賽前夕賄賂瓦朗西安隊的主力球員，以確保派出次選球員應戰仍能獲勝，而主力球員可休息以應付歐聯決賽，結果1-0輕鬆取勝，</p>'+
+				'	<p>但東窗事發，馬賽被判罸剝奪92/93球季聯賽冠軍的資格，降級乙組及禁止參加歐洲比賽，而主席貝奈德·塔皮（Bernard Tapie）因主謀罪成而被判處監禁一年。</p>'+
+
+				'</div>';
+
+}
+function changepagecom52(){
+var ex = document.getElementById("extra");
+
+	
+	ex.innerHTML = '<div class="column4"><a href = "#extra" onclick = "com5all()">'+
+					'<img src = "123/法甲/AS_Saint-Etienne-logo-BC6CB28590-seeklogo.com.png">'+
+					'</a>'+
+				'</div>'+
+				'<div>'+
+				'	<p>Association Sportive de Saint-Étienne Loire聖德田競技俱樂部，簡稱A.S. Saint-Étienne 或ASSE</p>'+
+				'	<p>是法國的一家競技俱樂部，位處法國中東部羅亞爾省首府的聖德田市。</p>'+
+				'	<p>聖德田乃法國一家最具歷史兼最成功的競技俱樂部，曾10奪法國甲級聯賽冠軍。</p>'+
+				'	<p>聖德田競技俱樂部是在1919年由一家雜貨店連鎖店的僱員成立。</p>'+
+				'	<p>當時俱樂部只是採用雜貨店招牌作名稱，因法國足總規例所限，1920年改稱 Amical Sporting Club。俱樂部名稱經過多次更改，最於1933年正式稱為聖德田競技俱樂部。</p>'+
+				'</div>';
+
+}
+function changepagecom53(){
+var ex = document.getElementById("extra");
+
+	
+	ex.innerHTML = '<div class="column4"><a href = "#extra" onclick = "com5all()">'+
+					'<img src = "123/法甲/巴黎聖日耳曼足球俱樂部logo.png">'+
+					'</a>'+
+				'</div>'+
+				'<div>'+
+				'	<p>Paris Saint-Germain Football Club巴黎聖日耳曼足球俱樂部，簡稱Paris SG或PSG</p>'+
+				'	<p>是位於法國首都巴黎的足球俱樂部，主場是可容納49,000名觀眾的王子公園體育場（Parc des Princes），現時在法國甲級足球聯賽比賽。</p>'+
+				'	<p>球隊在歷史上7次獲得法甲冠軍，並獲得過一次歐洲盃賽冠軍盃的錦標。</p>'+
+				'</div>';
+
+}
+function changepagecom54(){
+var ex = document.getElementById("extra");
+
+	
+	ex.innerHTML = '<div class="column4"><a href = "#extra" onclick = "com5all()">'+
+					'<img src = "123/法甲/1.png">'+
+					'</a>'+
+				'</div>'+
+				'<div>'+
+				'	<p>小內馬爾·達席爾瓦·桑托斯（Neymar da Silva Santos Júnior）</p>'+
+				'	<p>通常被稱為內馬爾或小內馬爾，世界著名巴西足球員，司職前鋒或翼鋒，現時效力法甲球隊巴黎聖日耳曼，並代表巴西國家足球隊出戰國際比賽，同時擔任巴西國家隊隊長。</p>'+
+				'	<p>內馬爾在19歲時贏得了2011年南美足球先生的稱號，且隔年2012年再次贏得此殊榮。</p>'+
+				'	<p>在巴塞隆納與梅西及蘇亞雷斯組成「MSN組合」。2014-2015球季，「MSN組合」總共攻入122球，被視為歷史級的鋒線組合。</p>'+
+				'	<p>2017年8月的夏天轉會窗，內馬爾以2.22億歐元轉會至巴黎聖日耳曼，轉會費打破世界紀錄。</p>'+
+			
+				'</div>';
+}
+function changepagecom55(){
+var ex = document.getElementById("extra");
+
+	
+	ex.innerHTML = '<div class="column4"><a href = "#extra" onclick = "com5all()">'+
+					'<img src = "123/法甲/2.png">'+
+					'</a>'+
+				'</div>'+
+				'<div>'+
+				'	<p>安赫爾·法比安·迪馬里亞·赫南德茲（Ángel Fabián Di María Hernández）</p>'+
+				'	<p>出生於阿根廷羅薩里奧，是一名阿根廷職業足球員，主要司職邊鋒，現效力法甲球隊巴黎聖日耳曼，</p>'+
+				'	<p>同時也是阿根廷國家足球隊成員，並代表阿根廷國家足球隊參加國際比賽。</p>'+
+				'</div>';
+}
+function changepagecom56(){
+var ex = document.getElementById("extra");
+
+	
+	ex.innerHTML = '<div class="column4"><a href = "#extra" onclick = "com5all()">'+
+					'<img src = "123/法甲/3.png">'+
+					'</a>'+
+				'</div>'+
+				'<div>'+
+				'	<p>基利安·姆巴佩·洛天（Kylian Mbappé Lottin）</p>'+
+				'	<p>法國職業職業足球員，司職前鋒，現由法甲球隊摩納哥外借到巴黎聖日耳曼。</p>'+
+				'	<p>他被譽為法國超新星， 2015年12月2日，姆巴佩於法甲賽事中在88分鐘後備替補由皇馬借用的法比奧·干查奧，以16歲347日之齡取代名將亨利保持了21年的最年輕上場紀錄隊史。</p>'+
+				'	<p>有「新亨利」之稱。 2016年12月14日，姆巴佩在對雷恩的法國聯賽盃16強賽事第一次在職業生涯上演帽子戲法。</p>'+
+				'	<p>打破前巴黎聖日耳曼射手文尼斯自2005年保持的法甲最年輕帽子戲法球員紀錄。</p>'+
+				'</div>';
+
+}
+function changepagecom57(){
+var ex = document.getElementById("extra");
+
+	
+	ex.innerHTML = '<div class="column4"><a href = "#extra" onclick = "com5all()">'+
+					'<img src = "123/法甲/4.png">'+
+					'</a>'+
+				'</div>'+
+				'<div>'+
+				'	<p>丁森·羅伯托·卡瓦尼·戈麥斯（Edinson Roberto Cavani Gómez）</p>'+
+				'	<p>是一名烏拉圭足球員，司職前鋒，也可以客串邊鋒，目前效力於法甲俱樂部巴黎聖日耳曼。</p>'+
+				'	<p>卡瓦尼綽號 「El Matador」(意為鬥牛士)，他於12歲的時候移居到蒙得維的亞，然後加入了當地俱樂部達努比奧的青訓營，</p>'+
+				'	<p>2006年進入了俱樂部的一線隊，他在第一個球季就打入9球併入選了最佳陣容。</p>'+
+				
+				'</div>';
+}
+
+
+$(function(){
+        $('#col1').click(function(){
+        $('html,body').animate({scrollTop:$('#extra').offset().top},800);
+    })
+		$('#col2').click(function(){
+        $('html,body').animate({scrollTop:$('#extra').offset().top},800);
+    })
+		$('#col3').click(function(){
+        $('html,body').animate({scrollTop:$('#extra').offset().top},800);
+    })	
+		$('#col4').click(function(){
+        $('html,body').animate({scrollTop:$('#extra').offset().top},800);
+    })
+		$('#col5').click(function(){
+        $('html,body').animate({scrollTop:$('#extra').offset().top},800);
+    })
+	
+	
+	});
+
+
+function DivDraw(e){
+x_out=32; // 與游標座標之水平距離
+y_out=32; // 與游標座標之垂直距離
+if(document.body.scrollTop && document.body.scrollTop !=0){
+dbst=document.body.scrollTop;
+dbsl=document.body.scrollLeft;
+}
+else{
+dbst=document.getElementsByTagName("html")[0].scrollTop;
+dbsl=document.getElementsByTagName("html")[0].scrollLeft;
+}
+dgs=document.getElementById("Layer3").style // 請將DivId取代為你網頁中<DIV ID="">之值
+y=e.clientY;x=e.clientX;
+dgs.top=y+dbst+y_out+"px";
+dgs.left=x+dbsl+x_out+"px";
+}
+</script>
+
+
+
+
+
+
+
+
+</head>
+<body  onmousemove="DivDraw(event)">
+<!-- <div id="header-wrapper"> -->
+  <!-- <div id="header" class="container"> -->
+    <!-- <div id="logo"> -->
+      <!-- <h1><a href="#">Breadth</a></h1> -->
+<!-- </div> -->
+    <!-- <div id="menu"> -->
+      <!-- <ul> -->
+        <!-- <li class="current_page_item"><a href="#" accesskey="1" title="">Homepage</a></li> -->
+        <!-- <li><a href="#" accesskey="2" title="">Our Clients</a></li> -->
+        <!-- <li><a href="#" accesskey="3" title="">About Us</a></li> -->
+        <!-- <li><a href="#" accesskey="4" title="">Careers</a></li> -->
+        <!-- <li><a href="#" accesskey="5" title="">Contact Us</a></li> -->
+      <!-- </ul> -->
+    <!-- </div> -->
+  <!-- </div> -->
+<!-- </div> -->
+
+
+<div id="Layer3" style="position:absolute; width:350px;  
+z-index:1; display : none;background-color : white">
+<div id="Layer4" style="position:absolute; width:350px;  z-index:1; 
+left: 0; top: 0; background-color : white"><p>西班牙足球甲級聯賽(Primera división de Liga，簡稱 La Liga)，通常簡稱「西甲」，是西班牙最高等級的職業足球聯賽，也是歐洲及世界最高水準的職業足球聯賽。目前西甲有 20 支球隊，聯賽成績最差的三隊將會降級到西班牙乙級聯賽，乙級聯賽的前三名則晉升到西班牙甲級聯賽。西甲聯賽的球風注重技術與進攻，具有很強的觀賞性。按國際足總和歐洲足總的官方積分，西甲曾經多年位於積分榜的首位。
+</p>
+</div>
+</div> 
+
+
+<div id="header-featured"> </div>
+<div id = "1111"><p>1111</p></div>
+<div id="wrapper">
+  <div id="featured-wrapper">
+    <div id="featured" class="container">
+      <div class="column1" id = "col1">  <span class="fas fa-futbol" id = "but1" onclick = "changepage1()"></span>
+        
+		<div class="title" onclick = "changepage1()">
+          <h2>頂級聯賽</h2>
+        </div>
+		
+        <p>從全世界陣容最豪華的五大職業聯賽了解關於豪門球隊及頂級球星們，透過其中了解足球的過去、現在及未來。</p>
+      </div>
+      <div class="column2" id = "col2"><span class="fas fa-user"  id = "but2"  onclick = "changepage2()"></span>
+        <div class="title"  onclick = "changepage2()">
+          <h2>傳奇球員</h2>
+        </div>
+		
+        <p>即使已風光退役，仍不會被世人遺忘的上古神獸們。帶你一窺他們超凡的技巧以及明星魅力</p>
+      </div>
+      <div class="column3"  id = "col3"> <span class="fas fa-trophy"  id = "but3"  onclick = "changepage3()"></span>
+        <div class="title"  onclick = "changepage3()">
+          <h2>各大賽事</h2>
+        </div>
+		
+        <p>各方人馬角逐足球的最高榮耀，不管是地區性、全球性亦或是職業性，最後只能有一隊高舉金盃。</p>
+		
+      </div>
+      <div class="column4"  id = "col4"> <span class="fas fa-file"  id = "but4"  onclick = "changepage4()"></span>
+        <div class="title"  onclick = "changepage4()">
+          <h2>各式紀錄</h2>
+        </div>
+		
+        <p>從刺激熱血背後，選手們所留下的絕不只有比分。從各種完美數據了解足球巔峰。</p>
+      </div>
+	  <div class="column4"  id = "col5"><span class="fas fa-crown"  id = "but5"  onclick = "changepage5()"></span>
+        <div class="title" onclick = "changepage5()">
+          <h2>台灣的足球</h2>
+        </div>
+		
+        <p>或許台灣的足球並不盛行，但已有長期的經營及培養；由此了解台灣不是只有世足熱，更多新世代準備起飛。</p>
+      </div>
+    </div>
+  </div>
+  <div id="extra" class="container">
+    <h2>Maecenas vitae orci vitae tellus feugiat eleifend</h2>
+    <span>Quisque dictum integer nisl risus, sagittis convallis, rutrum id, congue, and nibh</span> 
+    <p>This is <strong>Breadth</strong>, a free, fully standards-compliant CSS template designed by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>. The photos in this template are from <a href="http://fotogrph.com/"> Fotogrph</a>. This free template is released under the <a href="http://templated.co/license">Creative Commons Attribution</a> license, so you're pretty much free to do whatever you want with it (even use it commercially) provided you give us credit for it. Have fun :) </p>
+
+    <a href="#" class="button">Etiam posuere</a>
+	</div>
+</div>
+
+<div id="copyright" class="container">
+  <p>&copy; Untitled. All rights reserved. | Photos by <a href="http://fotogrph.com/">Fotogrph</a> | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
+</div>
+</body>
+</html>
